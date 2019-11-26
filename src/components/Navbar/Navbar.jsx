@@ -1,14 +1,22 @@
 import React from "react";
 import './Navbar.css';
+import Icon from './Icon.jsx';
 
 function Navbar(){
   return(
     <>
       <ul>
-        <li>About</li>
-        <li>Team</li>
-        <li>Press</li>
-        <li>Contact Info</li>
+        <li className="main">
+          <Icon/>
+        </li>
+        <li className="side">
+          <ul>
+            <li>About</li>
+            <li>Team</li>
+            <li>Press</li>
+            <li>Contact Info</li>
+          </ul>
+        </li>
       </ul>
     </>
   )

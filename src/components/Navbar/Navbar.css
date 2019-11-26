@@ -1,3 +1,27 @@
 ul {
-  background-color: red;
+  display: flex;
+  padding: 10px;
+  margin: 0;
+  flex-direction: row;
+  list-style: none;
+  background-color: rgba(81, 115, 194, 0.2);
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li:hover {
+  cursor: pointer;
+}
+
+li.side ul {
+  padding: 0;
+  background-color: rgba(0,0,0,0);
+}
+
+li.main {
+  display: inline-block;
 }
