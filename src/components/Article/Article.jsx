@@ -1,5 +1,6 @@
 import React from "react";
 import "./Article.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Article = prop => {
   return (
