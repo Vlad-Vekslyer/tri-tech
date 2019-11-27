@@ -17,7 +17,7 @@ ul li:hover {
   cursor: pointer;
 }
 
-li.hamburger {
+li.hamburger, ul.dropdown {
   display: none;
 }
 
@@ -45,6 +45,16 @@ li.main {
   }
 
   li.side {
-    display: none;
+    display:none;
+  }
+
+  ul.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  ul.dropdown li {
+    margin-bottom: 5px;
   }
 }

@@ -23,6 +23,12 @@ function Navbar(){
           </ul>
         </li>
       </ul>
+      <ul className="dropdown">
+        <li>About</li>
+        <li>Team</li>
+        <li>Press</li>
+        <li>Contact Info</li>
+      </ul>
     </>
   )
 }
