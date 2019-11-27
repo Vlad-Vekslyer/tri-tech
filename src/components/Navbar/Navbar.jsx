@@ -9,6 +9,11 @@ function Navbar(){
         <li className="main">
           <Icon/>
         </li>
+        <li className="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </li>
         <li className="side">
           <ul>
             <li>About</li>
