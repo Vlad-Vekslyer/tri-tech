@@ -1,12 +1,18 @@
+div {
+  position: relative;
+}
+
 ul {
   display: flex;
   padding: 10px;
   margin: 0;
   flex-direction: row;
   list-style: none;
-  background-color: rgba(81, 115, 194, 0.2);
+  background-color: #BFE5F2;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 ul li {
@@ -38,6 +44,12 @@ li.main {
   display: inline-block;
 }
 
+ul.dropdown {
+  display: none;
+  z-index: -1;
+  position: relative;
+}
+
 @media(max-width: 720px){
   li.hamburger {
     display: flex;
@@ -48,7 +60,10 @@ li.main {
     display:none;
   }
 
-  ul.dropdown {
+  ul.drop {
+    animation: drop 500ms;
+    z-index: -1;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -56,5 +71,14 @@ li.main {
 
   ul.dropdown li {
     margin-bottom: 5px;
+  }
+}
+
+@keyframes drop{
+  from {
+    top: -126px;
+  }
+  to {
+    top: 0;
   }
 }
