@@ -1,26 +1,40 @@
 div {
-  position: relative;
+  background-color: white;
+}
+
+button {
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  background-color: black;
+  color: white;
+  font-family: Roboto;
+}
+
+div.container {
+  width: 80%;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 
 ul {
   display: flex;
-  padding: 10px;
   margin: 0;
   flex-direction: row;
   list-style: none;
-  background-color: #BFE5F2;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 1;
-}
-
-ul li {
-  margin-right: 20px;
+  color: rgba(34,34,34, 0.6);
 }
 
 ul li:hover {
   cursor: pointer;
+}
+
+li.middle li {
+  padding: 5px 20px;
 }
 
 li.hamburger, ul.dropdown {
