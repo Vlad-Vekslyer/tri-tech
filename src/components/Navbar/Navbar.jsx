@@ -8,7 +8,7 @@ function Navbar(){
   return(
     <div>
       <div className="container">
-        <ul>
+        <ul className="top">
           <li className="main">
             <Icon/>
           </li>
@@ -34,6 +34,7 @@ function Navbar(){
           <li>Team</li>
           <li>Press</li>
           <li>Contact Info</li>
+          <button>Contact Us</button>
         </ul>
       </div>
     </div>

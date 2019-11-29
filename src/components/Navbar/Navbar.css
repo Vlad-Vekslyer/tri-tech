@@ -13,20 +13,25 @@ button {
 
 div.container {
   width: 80%;
-  padding: 20px 0;
   margin: 0 auto;
 }
 
 ul {
   display: flex;
+  position: relative;
+  z-index: 1;
   margin: 0;
+  padding: 0;
   flex-direction: row;
   list-style: none;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  background-color: white;
   color: rgba(34,34,34, 0.6);
+}
+
+ul.top {
+  padding: 20px 5px 0 10px;
 }
 
 ul li:hover {
@@ -49,34 +54,23 @@ li.hamburger > span {
   display: inherit;
 }
 
-li.side ul {
-  padding: 0;
-  background-color: rgba(0,0,0,0);
-}
-
 li.main {
   display: inline-block;
 }
 
-ul.dropdown {
-  display: none;
-  z-index: -1;
-  position: relative;
-}
-
-@media(max-width: 720px){
+@media(max-width: 980px){
   li.hamburger {
     display: flex;
     flex-direction: column;
   }
 
-  li.side {
+  li.middle, li.end {
     display:none;
   }
 
   ul.drop {
+    z-index: 0;
     animation: drop 500ms;
-    z-index: -1;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -84,7 +78,7 @@ ul.dropdown {
   }
 
   ul.dropdown li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
