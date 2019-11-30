@@ -1,33 +1,94 @@
-#adviser > .country {
+#adviser {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../../assets/worldminiMap.png) center center fixed no-repeat ;
+}
+#country {
     display: block;
     width: fit-content;
-    z-index: 1;
+    cursor: pointer;
 }
-#adviser > .country > p:hover {
+#country > div:hover {
     color: khaki;
 }
-#adviser > .card-component {
-    /* display: none; */
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
-    color: #0000ff;
-}
+/* -------------------------- */
+/* |         card           | */
+/* -------------------------- */
 #adviser .card-contents {
-    position: relative;
-    top: 25%;
-    left: 5%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+    opacity: 0;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 5%;
+    transition: .4s;
 }
-#adviser > .card-open {
-    height: 100%;
-    color: #0000ff ;
+#adviser  .card-open {
+    opacity: 1;
+    transition: .4s;
+    z-index: 1;
+}
+/* -------------------------- */
+/* |        pointer         | */
+/* -------------------------- */
+#adviser .point {
+    position: fixed;
+    left: 25%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    z-index: 1;
+}
+#adviser .point2 {
+    position: fixed;
+    left: 30%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    z-index: 1;
+}
+#adviser .point3 {
+    position: fixed;
+    left: 35%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    z-index: 1;
+}
+#adviser .point4 {
+    position: fixed;
+    left: 40%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    z-index: 1;
+}
+#adviser .point5 {
+    position: fixed;
+    left: 45%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    z-index: 1;
+}
+#adviser .point6 {
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    z-index: 1;
+}
+#adviser .point7 {
+    position: fixed;
+    left: 55%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    z-index: 1;
 }
