@@ -3,69 +3,69 @@ const txt = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum duc
 //------------------------~
 
 const CardData = {
-    chicago:        
+    "chicago":        
         [
             {
                 card_id: 1,
-                name: "jhon",
+                name: "jhon Alvince",
                 location: 'Chicago',
                 text: txt
             },
             {
                 card_id: 2,
-                name: "jhon",
+                name: "jean",
                 location: 'Chicago',
                 text: 'some information here..'
             },
             {
                 card_id: 3,
-                name: "jhon",
+                name: "jin",
                 location: 'Chicago',
                 text: 'some information here..'
             }   
         ]
 
     ,
-    van:{
-        0:{
+    "van":[
+        {
             card_id: 1,
             name: "jhon",
             location: 'Vancouver',
             text: 'some information here..'
         },
-        1:{
+        {
             card_id: 2,
             name: "jhon",
             location: 'Vancouver',
             text: 'some information here..'
         },
-        2:{
+        {
             card_id: 3,
             name: "jhon",
             location: 'Vancouver',
             text: 'some information here..'
         }
-    },
-    la:{
-        0:{
+    ],
+    "la":[
+        {
             card_id: 1,
             name: "jhon",
             location: 'Losangels',
             text: 'some information here..'
         },
-        1:{
+        {
             card_id: 2,
             name: "jhon",
             location: 'Losangels',
             text: 'some information here..'
         },
-        2:{
+        {
             card_id: 3,
             name: "jhon",
             location: 'Losangels',
             text: 'some information here..'
         }
-    }
+    ]
 }
 
 
