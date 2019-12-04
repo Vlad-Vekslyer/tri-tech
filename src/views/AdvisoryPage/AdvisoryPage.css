@@ -14,14 +14,26 @@
 /* -------------------------- */
 /* |         card           | */
 /* -------------------------- */
-#adviser .card-contents {
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.card-contents {
     opacity: 0;
     position: absolute;
     margin-top: 15%;
     margin-left: 5%;
     transition: .4s;
 }
-#adviser  .card-open {
+.card-open {
     opacity: 1;
     transition: .4s;
     z-index: 1;

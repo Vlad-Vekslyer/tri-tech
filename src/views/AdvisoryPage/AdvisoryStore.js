@@ -57,12 +57,91 @@ const CardData = {
             card_id: 2,
             name: "jhon",
             location: 'Losangels',
+            text: txt
+        },
+        {
+            card_id: 3,
+            name: "jean",
+            location: 'Losangels',
+            text: 'some information here..'
+        }
+    ],"nyc":[
+        {
+            card_id: 1,
+            name: "jhon",
+            location: 'New York City',
+            text: 'some information here..'
+        },
+        {
+            card_id: 2,
+            name: "jean",
+            location: 'New York City',
             text: 'some information here..'
         },
         {
             card_id: 3,
             name: "jhon",
-            location: 'Losangels',
+            location: 'New York City',
+            text: 'some information here..'
+        }
+    ],
+    "dallas":[
+        {
+            card_id: 1,
+            name: "jhon",
+            location: 'Dallas',
+            text: 'some information here..'
+        },
+        {
+            card_id: 2,
+            name: "jean",
+            location: 'Dallas',
+            text: 'some information here..'
+        },
+        {
+            card_id: 3,
+            name: "jean",
+            location: 'Dallas',
+            text: 'some information here..'
+        }
+    ],
+    "mexico":[
+        {
+            card_id: 1,
+            name: "jean",
+            location: 'Mexico City',
+            text: 'some information here..'
+        },
+        {
+            card_id: 2,
+            name: "jhon",
+            location: 'Mexico City',
+            text: 'some information here..'
+        },
+        {
+            card_id: 3,
+            name: "jhon",
+            location: 'Mexico City',
+            text: 'some information here..'
+        }
+    ],
+    "berlin":[
+        {
+            card_id: 1,
+            name: "jhon",
+            location: 'Berlin',
+            text: 'some information here..'
+        },
+        {
+            card_id: 2,
+            name: "jean",
+            location: 'Berlin',
+            text: 'some information here..'
+        },
+        {
+            card_id: 3,
+            name: "jhon",
+            location: 'Berlin',
             text: 'some information here..'
         }
     ]
