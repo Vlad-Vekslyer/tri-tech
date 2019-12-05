@@ -10,9 +10,10 @@ const Card = (props) => {
                     {props.imageUrl && <img src={props.imageUrl} alt="person-face_img" />}
                 </div>
                 <span> 
-                    {props.name} {props.location}<br/>
-                    {props.text}
+                    {props.name}, {props.location}
+                    <p>{props.text}</p>    
                 </span>
+                
             </div>
         </>
     )

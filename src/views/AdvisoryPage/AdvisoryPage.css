@@ -15,25 +15,31 @@
 /* |         card           | */
 /* -------------------------- */
 .close {
-    color: #aaaaaa;
-    float: right;
+    position: absolute;
+    right: 0;
+    padding: 0px 8px;
+    color: #dddddd;
     font-size: 28px;
     font-weight: bold;
+    user-select: none;
 }
 
-.close:hover,.close:focus {
+.card-open > .close:hover,.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 .card-contents {
+    visibility: hidden;
     opacity: 0;
     position: absolute;
     margin-top: 15%;
     margin-left: 5%;
     transition: .4s;
+    border: 2px solid #dddddd;
 }
 .card-open {
+    visibility: visible;
     opacity: 1;
     transition: .4s;
     z-index: 1;

@@ -1,5 +1,5 @@
 //for sample text---------~
-const txt = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum ducimus rerum blanditiis quis obcaecati, veniam laborum vitae sit aliquid debitis nemo non dignissimos ab nisi! Explicabo, eius nemo! Deleniti, illo?";
+const txt = "Mr. Bagry is a seasoned finance professionaland entrepreneur with over 10 yearsexperience in fund management and advisoryservices. In his current role, his acts asManaging Director for family ownedinvestments and asset management.Previously, he was VP at New Market Funds,where he helped raise $65 million and help withbusiness strategy, capital raises, M&A, andvaluations. He is also a CFA Charterholder.";
 //------------------------~
 
 const CardData = {
@@ -10,19 +10,19 @@ const CardData = {
                 name: "jhon Alvince",
                 location: 'Chicago',
                 text: txt
-            },
-            {
-                card_id: 2,
-                name: "jean",
-                location: 'Chicago',
-                text: 'some information here..'
-            },
-            {
-                card_id: 3,
-                name: "jin",
-                location: 'Chicago',
-                text: 'some information here..'
-            }   
+            }
+            // {
+            //     card_id: 2,
+            //     name: "jean",
+            //     location: 'Chicago',
+            //     text: 'some information here..'
+            // },
+            // {
+            //     card_id: 3,
+            //     name: "jin",
+            //     location: 'Chicago',
+            //     text: 'some information here..'
+            // }   
         ]
 
     ,
@@ -31,27 +31,27 @@ const CardData = {
             card_id: 1,
             name: "jhon",
             location: 'Vancouver',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 2,
             name: "jhon",
             location: 'Vancouver',
-            text: 'some information here..'
+            text: txt
         },
-        {
-            card_id: 3,
-            name: "jhon",
-            location: 'Vancouver',
-            text: 'some information here..'
-        }
+        // {
+        //     card_id: 3,
+        //     name: "jhon",
+        //     location: 'Vancouver',
+        //     text: 'some information here..'
+        // }
     ],
     "la":[
         {
             card_id: 1,
             name: "jhon",
             location: 'Losangels',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 2,
@@ -63,26 +63,26 @@ const CardData = {
             card_id: 3,
             name: "jean",
             location: 'Losangels',
-            text: 'some information here..'
+            text: txt
         }
     ],"nyc":[
         {
             card_id: 1,
             name: "jhon",
             location: 'New York City',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 2,
             name: "jean",
             location: 'New York City',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 3,
             name: "jhon",
             location: 'New York City',
-            text: 'some information here..'
+            text: txt
         }
     ],
     "dallas":[
@@ -90,13 +90,13 @@ const CardData = {
             card_id: 1,
             name: "jhon",
             location: 'Dallas',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 2,
             name: "jean",
             location: 'Dallas',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 3,
@@ -110,19 +110,19 @@ const CardData = {
             card_id: 1,
             name: "jean",
             location: 'Mexico City',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 2,
             name: "jhon",
             location: 'Mexico City',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 3,
             name: "jhon",
             location: 'Mexico City',
-            text: 'some information here..'
+            text: txt
         }
     ],
     "berlin":[
@@ -130,19 +130,37 @@ const CardData = {
             card_id: 1,
             name: "jhon",
             location: 'Berlin',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 2,
             name: "jean",
             location: 'Berlin',
-            text: 'some information here..'
+            text: txt
         },
         {
             card_id: 3,
             name: "jhon",
             location: 'Berlin',
-            text: 'some information here..'
+            text: txt
+        },
+        {
+            card_id: 4,
+            name: "jhon",
+            location: 'Berlin',
+            text: txt
+        },
+        {
+            card_id: 5,
+            name: "jean",
+            location: 'Berlin',
+            text: txt
+        },
+        {
+            card_id: 6,
+            name: "jhon",
+            location: 'Berlin',
+            text: txt
         }
     ]
 }

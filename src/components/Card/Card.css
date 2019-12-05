@@ -1,12 +1,15 @@
 #Card {
-    background-color: #a9a9aa;
-    width: 380px;
+    background-color: #fff;
+    min-width: 380px;
+    max-width: 380px;
     padding: 5px;
     display: table-cell;
     /* vertical-align: middle */
 }
-#Card > p {
-    font-size: small;
+#Card > span > p {
+    color: #585858;
+    font-size: 12px;
+    font-weight: 500;
 }
 #Card img {
     vertical-align: top;
@@ -16,5 +19,9 @@
     text-align: left;
     padding: 8px;
     display: table-cell;
+    font-weight: bold;
     /* vertical-align: middle; */
+}
+span::selection, p::selection {
+    background-color: lightskyblue;
 }

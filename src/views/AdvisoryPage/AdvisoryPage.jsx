@@ -4,10 +4,11 @@ import "./AdvisoryPage.css";
 import Card from "../../components/Card/Card.jsx"
 import CardData from "./AdvisoryStore"
 
-
 const AdvisoryPage = () => {
-    //for test props---
+    //for test code---
     let locate;
+    let isClicked = false;
+    let isClosed = false;
     // -----------------
 
     // let chicagoCards = CardData.chicago.map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
@@ -17,15 +18,25 @@ const AdvisoryPage = () => {
         let cards = CardData[city].map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
         return (
             <div id={city} className="card-contents">
-                <span className="close" onClick={() => mouseClickHandlar(locate)}>&times;</span>
+                <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
                 {cards}
             </div>
         );
     });
 
     function mouseClickHandlar(place) {
-        locate = place
-        document.getElementById(place).classList.toggle('card-open')
+        if(!isClicked || isClosed){
+            document.getElementById(place).classList.toggle('card-open')
+            locate = place
+            isClicked = !isClicked
+            isClosed = false;
+            console.log("Clicked!!!!", isClicked)
+        }
+    }
+
+    function closeClickHandlar(){
+        isClosed = !isClosed;
+        mouseClickHandlar(locate)
     }
 
     return (
@@ -41,9 +52,9 @@ const AdvisoryPage = () => {
                 <div className="point6" onClick={() => mouseClickHandlar("mexico")}>Point</div>
                 <div className="point7" onClick={() => mouseClickHandlar("berlin")}>Point</div>
             </div>  
-            <div id="card-component" className="card-component"> 
+            <div id="card-component" className="card-component">
                 {cities}
-            </div>
+            </div> 
             
         </div>
         </>
