@@ -1,52 +1,64 @@
 import React, {useRef, useEffect} from "react";
 
-function animate(context, canvas){
-  requestAnimationFrame(animate);
-  context.clearRect(0,0, canvas.height, canvas.width);
+let frame = 0;
+
+function animate(context){
+  requestAnimationFrame(() => animate(context));
+  context.clearRect(0,0, 640, 425);
+  createHexagon(context, [200, 200], 100, frame / 1.7);
+  frame++;
 }
 
-function createHexagon(context, startPoint, size){
+function createHexagon(context, startPoint, size, frame){
   let [startX, startY] = startPoint;
+  // each of the drawings below is a triangle that composes the hexagon
+  //top left
+  let center = [startX - frame, startY - frame];
   context.beginPath();
-  context.moveTo(startX, startY);
-  context.lineTo(startX - size, startY);
-  context.lineTo(startX - (size / 2), startY - size);
-  context.lineTo(startX, startY);
+  context.moveTo(center[0], center[1]);
+  context.lineTo(center[0] - size, center[1]);
+  context.lineTo(center[0] - (size / 2), center[1] - size);
+  context.lineTo(center[0], center[1]);
   context.stroke();
-
+  // top middle
+  center = [startX, startY - frame];
   context.beginPath();
-  context.moveTo(startX, startY);
-  context.lineTo(startX - (size / 2), startY - size);
-  context.lineTo(startX - (size / 2) + size, startY - size);
-  context.lineTo(startX, startY);
+  context.moveTo(center[0], center[1]);
+  context.lineTo(center[0] - (size / 2), center[1] - size);
+  context.lineTo(center[0] - (size / 2) + size, center[1] - size);
+  context.lineTo(center[0], center[1]);
   context.stroke();
-
+  // top right
+  center = [startX + frame, startY - frame];
   context.beginPath();
-  context.moveTo(startX, startY);
-  context.lineTo(startX + size, startY);
-  context.lineTo(startX + (size / 2), startY - size);
-  context.lineTo(startX, startY);
+  context.moveTo(center[0], center[1]);
+  context.lineTo(center[0] + size, center[1]);
+  context.lineTo(center[0] + (size / 2), center[1] - size);
+  context.lineTo(center[0], center[1]);
   context.stroke();
-
+  // bottom right
+  center = [startX + frame, startY + frame];
   context.beginPath();
-  context.moveTo(startX, startY);
-  context.lineTo(startX + size, startY);
-  context.lineTo(startX + (size / 2), startY + size);
-  context.lineTo(startX, startY);
+  context.moveTo(center[0], center[1]);
+  context.lineTo(center[0] + size, center[1]);
+  context.lineTo(center[0] + (size / 2), center[1] + size);
+  context.lineTo(center[0], center[1]);
   context.stroke();
-
+  // bottom middle
+  center = [startX, startY + frame];
   context.beginPath();
-  context.moveTo(startX, startY);
-  context.lineTo(startX - (size / 2), startY + size);
-  context.lineTo(startX - (size / 2) + size, startY + size);
-  context.lineTo(startX, startY);
+  context.moveTo(center[0], center[1]);
+  context.lineTo(center[0] - (size / 2), center[1] + size);
+  context.lineTo(center[0] - (size / 2) + size, center[1] + size);
+  context.lineTo(center[0], center[1]);
   context.stroke();
-
+  // bottom left
+  center = [startX - frame, startY + frame];
   context.beginPath();
-  context.moveTo(startX, startY);
-  context.lineTo(startX - size, startY);
-  context.lineTo(startX - (size / 2), startY + size);
-  context.lineTo(startX, startY);
+  context.moveTo(center[0], center[1]);
+  context.lineTo(center[0] - size, center[1]);
+  context.lineTo(center[0] - (size / 2), center[1] + size);
+  context.lineTo(center[0], center[1]);
   context.stroke();
 }
 
@@ -55,7 +67,7 @@ function Animation(){
   useEffect(() => {
     if(canvas.current){
       let context = canvas.current.getContext('2d');
-      createHexagon(context, [200, 200], 100);
+      animate(context);
     }
   }, [])
   return(
