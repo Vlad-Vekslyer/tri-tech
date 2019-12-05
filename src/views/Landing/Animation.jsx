@@ -1,24 +1,53 @@
 import React, {useRef, useEffect} from "react";
 
-function animate(){
+function animate(context, canvas){
   requestAnimationFrame(animate);
-
+  context.clearRect(0,0, canvas.height, canvas.width);
 }
 
 function createHexagon(context, startPoint, size){
-  context.beginPath();
   let [startX, startY] = startPoint;
+  context.beginPath();
+  context.moveTo(startX, startY);
+  context.lineTo(startX - size, startY);
+  context.lineTo(startX - (size / 2), startY - size);
+  context.lineTo(startX, startY);
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(startX, startY);
+  context.lineTo(startX - (size / 2), startY - size);
+  context.lineTo(startX - (size / 2) + size, startY - size);
+  context.lineTo(startX, startY);
+  context.stroke();
+
+  context.beginPath();
   context.moveTo(startX, startY);
   context.lineTo(startX + size, startY);
   context.lineTo(startX + (size / 2), startY - size);
   context.lineTo(startX, startY);
   context.stroke();
-  // context.beginPath();
-  // context.moveTo(300, 300);
-  // context.lineTo(200, 100);
-  // context.lineTo(400, 100);
-  // context.lineTo(300, 300);
-  // context.stroke();
+
+  context.beginPath();
+  context.moveTo(startX, startY);
+  context.lineTo(startX + size, startY);
+  context.lineTo(startX + (size / 2), startY + size);
+  context.lineTo(startX, startY);
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(startX, startY);
+  context.lineTo(startX - (size / 2), startY + size);
+  context.lineTo(startX - (size / 2) + size, startY + size);
+  context.lineTo(startX, startY);
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(startX, startY);
+  context.lineTo(startX - size, startY);
+  context.lineTo(startX - (size / 2), startY + size);
+  context.lineTo(startX, startY);
+  context.stroke();
 }
 
 function Animation(){
@@ -26,13 +55,7 @@ function Animation(){
   useEffect(() => {
     if(canvas.current){
       let context = canvas.current.getContext('2d');
-      createHexagon(context, [100, 300], 100);
-      // context.beginPath();
-      // context.moveTo(300, 300);
-      // context.lineTo(200, 100);
-      // context.lineTo(400, 100);
-      // context.lineTo(300, 300);
-      // context.stroke();
+      createHexagon(context, [200, 200], 100);
     }
   }, [])
   return(
