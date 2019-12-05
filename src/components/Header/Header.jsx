@@ -14,7 +14,7 @@ const Header = ({ position, large, underline, children }) => {
 }
 
 Header.propTypes = {
-    position: PropTypes.isRequired.oneOf(["left", "center"]),
+    position: PropTypes.oneOf(["left", "center"]).isRequired,
     large: PropTypes.bool,
     underline: PropTypes.bool
 };
