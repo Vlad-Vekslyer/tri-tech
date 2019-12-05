@@ -44,14 +44,13 @@ const AdvisoryPage = () => {
         <div id="adviser" className="adviser">   
             <div id="country">
                 {/* mouseClickHandlar(props) <= should be properties*/}
-                <div><div className="point" onClick={() => mouseClickHandlar("chicago")}><img src={vector} ></img></div><p>Chicago</p></div>
-                
-                <div className="point2" onClick={() => mouseClickHandlar("van")}><img src={vector} ></img><p>Vancouver</p></div>
-                <div className="point3" onClick={() => mouseClickHandlar("la")}><img src={vector} ></img><p>Los Angels</p></div>
-                <div className="point4" onClick={() => mouseClickHandlar("nyc")}><img src={vector} ></img><p>New york City</p></div>
-                <div className="point5" onClick={() => mouseClickHandlar("dallas")}><img src={vector} ></img><p>Dallas</p></div>
-                <div className="point6" onClick={() => mouseClickHandlar("mexico")}><img src={vector} ></img><p>Mexico City</p></div>
-                <div className="point7" onClick={() => mouseClickHandlar("berlin")}><img src={vector} ></img><p>Berlin</p></div>
+                <div className="vector vector1"><img className="point" onClick={() => mouseClickHandlar("chicago")} src={vector} ></img><p>Chicago</p></div>
+                <div className="vector vector2"><img className="point" onClick={() => mouseClickHandlar("van")} src={vector} ></img><p>Vancouver</p></div>
+                <div className="vector vector3"><img className="point" onClick={() => mouseClickHandlar("la")} src={vector} ></img><p>Los Angels</p></div>
+                <div className="vector vector4"><img className="point" onClick={() => mouseClickHandlar("nyc")} src={vector} ></img><p>New york City</p></div>
+                <div className="vector vector5"><img className="point" onClick={() => mouseClickHandlar("dallas")} src={vector} ></img><p>Dallas</p></div>
+                <div className="vector vector6"><img className="point" onClick={() => mouseClickHandlar("mexico")} src={vector} ></img><p>Mexico City</p></div>
+                <div className="vector vector7"><img className="point" onClick={() => mouseClickHandlar("berlin")} src={vector} ></img><p>Berlin</p></div>
             </div>  
             <div id="card-component" className="card-component">
                 {cities}

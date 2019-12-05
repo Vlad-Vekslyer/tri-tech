@@ -1,3 +1,6 @@
+/* -------------------------- */
+/* |        pointer         | */
+/* -------------------------- */
 #adviser {
     width: 100%;
     min-height: 100vh;
@@ -6,8 +9,13 @@
 #country {
     display: block;
     width: fit-content;
-    cursor: pointer;
+    cursor: default;
     text-align: center;
+}
+#country .point {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
 }
 #country p{
     margin: 0;
@@ -45,48 +53,44 @@
     transition: .4s;
     z-index: 1;
 }
-/* -------------------------- */
-/* |        pointer         | */
-/* -------------------------- */
-#adviser .point {
-    position: fixed;
+/*--------------------------*/
+/*|        vector          |*/
+/*--------------------------*/
+#country .vector {
+    user-select: none;
+}
+#adviser .vector1{
+    position: absolute;
+    top: 22em;
+    left: 23em;
+}
+#adviser .vector2 {
+    position: absolute;
+    top: 19.7em;
+    left: 14em;
+}
+#adviser .vector3 {
+    position: absolute;
+    top: 23.5em;
+    left: 15em;
+}
+/* #adviser .vector4 {
+    position: absolute;
+    top: 23em;
+    left: 20em;
+} */
+/* #adviser .vector5 {
+    position: absolute;
+    top: 50%;
     left: 25%;
-    top: 10%;
-    z-index: 1;
+} */
+#adviser .vector6 {
+    position: absolute;
+    top: 26.5em;
+    left: 19em;
 }
-#adviser .point2 {
-    position: fixed;
-    left: 30%;
-    top: 10%;
-    z-index: 1;
-}
-#adviser .point3 {
-    position: fixed;
-    left: 35%;
-    top: 10%;
-    z-index: 1;
-}
-#adviser .point4 {
-    position: fixed;
-    left: 40%;
-    top: 10%;
-    z-index: 1;
-}
-#adviser .point5 {
-    position: fixed;
-    left: 45%;
-    top: 10%;
-    z-index: 1;
-}
-#adviser .point6 {
-    position: fixed;
-    left: 50%;
-    top: 10%;
-    z-index: 1;
-}
-#adviser .point7 {
-    position: fixed;
-    left: 55%;
-    top: 10%;
-    z-index: 1;
-}
+/* #adviser .vector7 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+} */
