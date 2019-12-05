@@ -1,15 +1,16 @@
 #adviser {
     width: 100%;
     min-height: 100vh;
-    background: url(../../assets/worldminiMap.png) center center fixed no-repeat ;
+    background: url(../../assets/world-miniMap.svg) center center fixed no-repeat ;
 }
 #country {
     display: block;
     width: fit-content;
     cursor: pointer;
+    text-align: center;
 }
-#country > div:hover {
-    color: khaki;
+#country p{
+    margin: 0;
 }
 /* -------------------------- */
 /* |         card           | */
@@ -51,62 +52,41 @@
     position: fixed;
     left: 25%;
     top: 10%;
-    width: 50px;
-    height: 50px;
-    background-color: chartreuse;
     z-index: 1;
 }
 #adviser .point2 {
     position: fixed;
     left: 30%;
     top: 10%;
-    width: 50px;
-    height: 50px;
-    background-color: chartreuse;
     z-index: 1;
 }
 #adviser .point3 {
     position: fixed;
     left: 35%;
     top: 10%;
-    width: 50px;
-    height: 50px;
-    background-color: chartreuse;
     z-index: 1;
 }
 #adviser .point4 {
     position: fixed;
     left: 40%;
     top: 10%;
-    width: 50px;
-    height: 50px;
-    background-color: chartreuse;
     z-index: 1;
 }
 #adviser .point5 {
     position: fixed;
     left: 45%;
     top: 10%;
-    width: 50px;
-    height: 50px;
-    background-color: chartreuse;
     z-index: 1;
 }
 #adviser .point6 {
     position: fixed;
     left: 50%;
     top: 10%;
-    width: 50px;
-    height: 50px;
-    background-color: chartreuse;
     z-index: 1;
 }
 #adviser .point7 {
     position: fixed;
     left: 55%;
     top: 10%;
-    width: 50px;
-    height: 50px;
-    background-color: chartreuse;
     z-index: 1;
 }
