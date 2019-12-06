@@ -1,0 +1,31 @@
+@mixin break($size, $isMax: false) {
+  $breakpoints: (
+    // Extra small screen / phone
+      xs: 480px,
+    // Small screen / phone
+      sm: 576px,
+    // Medium screen / tablet
+      md: 768px,
+    // Medium large screen / desktop narrow
+      mdlg: 968px,
+    // Large screen / desktop
+      lg: 1080px,
+    // Extra large screen / wide desktop
+      xl: 1370px,
+    xxl: 1600px
+  );
+
+  @if (map-has-key($breakpoints, $size)) {
+    @if ($isMax) {
+      @media (max-width: (map-get($breakpoints, $size) - 1px)) {
+        @content;
+      }
+    } @else {
+      @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "$size doesn't exist in $breakpoints.";
+  }
+}
