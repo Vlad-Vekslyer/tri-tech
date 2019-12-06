@@ -8,19 +8,52 @@ let hexagonProps = [];
 // to create a new hexagon, push an object to the hexagonProps array
 hexagonProps.push({
   startX: 400,
-  startY: 200,
-  speedRate: 20,
+  startY: 250,
+  speedRate: 15,
   size: 150,
-  delay: 5
+  delay: 20
 });
 
 hexagonProps.push({
-  startX: 550,
-  startY: 80,
+  startX: 600,
+  startY: 150,
   speedRate: 15,
-  size: 60,
+  size: 50,
+  delay: 40
+});
+
+hexagonProps.push({
+  startX: 200,
+  startY: 75,
+  speedRate: 25,
+  size: 50,
+  delay: 20
+});
+
+hexagonProps.push({
+  startX: 150,
+  startY: 450,
+  speedRate: 15,
+  size: 30,
   delay: 30
 });
+
+hexagonProps.push({
+  startX: 280,
+  startY: 500,
+  speedRate: 15,
+  size: 30,
+  delay: 40
+});
+
+hexagonProps.push({
+  startX: 600,
+  startY: 450,
+  speedRate: 30,
+  size: 30,
+  delay: 50
+});
+
 
 function animate(context, props){
   requestAnimationFrame(() => animate(context, props));
@@ -81,7 +114,7 @@ function createHexagon(context, props){
   context.lineTo(center[0] - (size / 2) + size, center[1] + size);
   context.lineTo(center[0], center[1]);
   context.stroke();
-  
+
   // bottom left
   center = frame > delay ? [startX - speed, startY + speed] : [startX, startY];
   context.beginPath();
@@ -102,7 +135,7 @@ function Animation(props){
   }, [])
   return(
     <>
-      <canvas ref={canvas} width={props.width} height={props.height}/>
+      <canvas style={{position: "absolute", right: "30px"}} ref={canvas} width={props.width} height={props.height}/>
     </>
   )
 }

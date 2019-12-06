@@ -1,4 +1,5 @@
 import React from "react";
+import Animation from "./Animation.jsx";
 import './Landing.scss';
 
 function Landing(){
@@ -10,6 +11,7 @@ function Landing(){
         <p>Seeking opportunities in early stage Esports, Sports & Entertainment Technologies</p>
         <button>Let's Talk</button>
       </section>
+      <Animation height={600} width={800}/>
     </>
   )
 }
