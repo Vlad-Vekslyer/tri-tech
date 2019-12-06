@@ -5,7 +5,7 @@ import Animation from '../views/Landing/Animation.jsx';
 function App() {
   return(
     <>
-      <Animation/>
+      <Animation width={645} height={450}/>
     </>
   );
 }
