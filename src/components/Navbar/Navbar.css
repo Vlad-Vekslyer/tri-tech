@@ -4,15 +4,15 @@ div {
 
 button {
   border: none;
-  padding: 12px 25px;
+  padding: 17px 0;
   font-size: 1.2em;
-  background-color: black;
+  background-color: #3898EC;
   color: white;
   font-family: Roboto;
 }
 
 div.container {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -38,7 +38,7 @@ ul li:hover {
   cursor: pointer;
 }
 
-li.middle li {
+li.end li {
   padding: 5px 20px;
 }
 

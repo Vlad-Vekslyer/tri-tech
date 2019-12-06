@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Animation from '../views/Landing/Animation.jsx';
+import Navbar from "./Navbar/Navbar.jsx";
+import Landing from "../views/Landing/Landing.jsx";
 
 function App() {
   return(
     <>
-      <Animation width={645} height={450}/>
+      <Navbar/>
+      <Landing/>
     </>
   );
 }

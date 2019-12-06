@@ -17,24 +17,22 @@ function Navbar(){
             <span></span>
             <span></span>
           </li>
-          <li className="middle">
+          <li className="end">
             <ul>
+              <li>Home</li>
               <li>About</li>
               <li>Team</li>
-              <li>Press</li>
-              <li>Contact Info</li>
+              <li>Network</li>
+              <li>Contact</li>
             </ul>
-          </li>
-          <li className="end">
-            <button>Contact Us</button>
           </li>
         </ul>
         <ul className={classnames('dropdown', {drop : isDrop})}>
+          <li>Home</li>
           <li>About</li>
           <li>Team</li>
-          <li>Press</li>
-          <li>Contact Info</li>
-          <button>Contact Us</button>
+          <li>Network</li>
+          <li>Contact</li>
         </ul>
       </div>
     </div>
