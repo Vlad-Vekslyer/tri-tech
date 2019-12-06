@@ -1,0 +1,30 @@
+.articles-toggler-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sticky {
+    position: sticky;
+    bottom: 20px;
+}
+
+.toggler {
+    display: flex;
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+}
+
+.arrow {
+    display: inline-block;
+    margin-right: 5px;
+    transition: 0.5s;
+    svg {
+        height: 20px;
+    }
+}
+
+.up {
+    transform: rotateX(-180deg);
+}

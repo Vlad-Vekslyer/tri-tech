@@ -1,16 +1,15 @@
 import React from "react";
 import "./Article.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 
-const Article = prop => {
+const Article = ({ img, title, date, author }) => {
   return (
     <div>
       <div className="content card">
-        <img className="card-img-top" src={prop.img} alt="Card" />
+        <img className="card-img-top" src={img} alt="Card" />
         <div className="card-body">
-          <h3 className="card-title">{prop.title}</h3>
+          <h3 className="card-title">{title}</h3>
           <p>
-            {prop.date} by {prop.author}
+            {date} by {author}
           </p>
           <p className="card-text">
             Some quick example text to build on the card title and make up the
