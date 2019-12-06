@@ -6,15 +6,19 @@ import './Press.css';
 
 const Press = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isAbsolute, setIsAbsolute] = useState(false);
     const [articles, setArticles] = useState([1, 2, 3, 4, 5, 6]);
-    const pressSection = useRef(null);
-    const bottom = pressSection.offsetTop - 190;
+    const pressSection = useRef();
+
+    document.onscroll = () => {
+        setIsAbsolute(isOpen && (window.pageYOffset < pressSection.current.offsetTop - 315));
+    }
 
     const handleClickToggler = () => {
         setIsOpen(!isOpen);
     }
     return (
-        <section ref={pressSection}>
+        <section id="press" ref={pressSection}>
             <div className={classNames("grid-container", (isOpen ? "show" : "collapse"))}>
                 {
                     articles.map((article) => {
@@ -24,7 +28,7 @@ const Press = () => {
                     })
                 }
             </div>
-            <ArticlesToggler handleClickToggler={handleClickToggler} isOpen={isOpen} />
+            <ArticlesToggler isOpen={isOpen} isAbsolute={isAbsolute} handleClickToggler={handleClickToggler} />
         </section>
     );
 }

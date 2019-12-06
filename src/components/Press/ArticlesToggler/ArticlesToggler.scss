@@ -8,12 +8,21 @@
     bottom: 20px;
 }
 
+.absolute {
+    position: absolute;
+    top: 190px;
+    left: 0;
+    right: 0;
+}
+
 .toggler {
     display: flex;
     cursor: pointer;
-    height: 20px;
-    line-height: 20px;
-    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px 0 0;
+    border: 1px solid #000;
+    background-color: #fff;
 }
 
 .arrow {
