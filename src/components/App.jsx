@@ -1,13 +1,8 @@
-import React from 'react';
-import './App.css';
-import Animation from '../views/Landing/Animation.jsx';
+import React from "react";
+import "./App.css";
 
 function App() {
-  return(
-    <>
-      <Animation width={645} height={450}/>
-    </>
-  );
+  return <></>;
 }
 
 export default App;
