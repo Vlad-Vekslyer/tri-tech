@@ -14,8 +14,8 @@ const Article = ({ img, title, date, author, text }) => {
         <p className="card-text">
           {text}
         </p>
-        <a href="#" className="btn btn-primary">
-          Read more
+        <a href="#" className="read-more">
+          Read More >
         </a>
       </div>
     </div>

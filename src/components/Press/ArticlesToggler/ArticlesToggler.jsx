@@ -20,7 +20,8 @@ const ArticlesToggler = ({ isOpen, handleClickToggler }) => {
 }
 
 ArticlesToggler.propTypes = {
-    isOpen: PropTypes.bool.isRequired
+    isOpen: PropTypes.bool.isRequired,
+    handleClickToggler: PropTypes.func
 };
 
 ArticlesToggler.defaultProps = {

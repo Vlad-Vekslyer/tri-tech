@@ -15,5 +15,12 @@
 
   .card-body {
     color: #f5f5f5;
+
+    .read-more {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #068dc2;
+      background-color: #f5f5f5;
+    }
   }
 }
