@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
+import Header from '../../components/Header/Header';
 import Article from '../../components/Press/Article/Article';
 import ArticlesToggler from '../../components/Press/ArticlesToggler/ArticlesToggler';
 import './Press.scss';
@@ -22,6 +23,9 @@ const Press = () => {
 
     return (
         <section id="press" ref={pressSection}>
+            <Header position="center">
+                Press
+            </Header>
             <div ref={articlesDiv} className="grid-container" style={{ maxHeight }}>
                 {
                     articles.map(({ img, title, date, author }) => {
