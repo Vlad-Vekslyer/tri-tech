@@ -5,15 +5,15 @@ import './ArticlesToggler.scss';
 import ArrowIcon from '../ArrowIcon';
 
 const ArticlesToggler = ({ isOpen, handleClickToggler }) => {
-    const togglerText = isOpen ? "Fold Up" : "Show More";
+    const togglerText = isOpen ? "Show Less" : "Show More";
 
     return (
         <div className={classNames("articles-toggler-container", { "sticky": isOpen })}>
             <div className="toggler" onClick={handleClickToggler}>
+                <div>{togglerText}</div>
                 <div className={classNames("arrow", { "up": isOpen })}>
                     <ArrowIcon />
                 </div>
-                <div>{togglerText}</div>
             </div>
         </div>
     );

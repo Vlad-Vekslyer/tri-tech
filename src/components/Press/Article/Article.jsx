@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Article = ({ img, title, date, author, text }) => {
   return (
-    <div className="content card">
+    <div className="card">
       <img className="card-img-top" src={img} alt="Card" />
       <div className="card-body">
         <h3 className="card-title">{title}</h3>

@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import Header from '../../components/Header/Header';
 import Article from '../../components/Press/Article/Article';
 import ArticlesToggler from '../../components/Press/ArticlesToggler/ArticlesToggler';
+import '../../components/App.css';
 import './Press.scss';
 
 const Press = () => {
@@ -20,7 +21,8 @@ const Press = () => {
     }
 
     return (
-        <section id="press" ref={pressSection}>
+        <section id="press" className="container" ref={pressSection}>
+            <div className="cover"></div>
             <Header position="center">
                 Press
             </Header>

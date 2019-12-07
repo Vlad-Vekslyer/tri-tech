@@ -9,7 +9,7 @@ const ArrowIcon = () => {
             width="24"
             height="24"
             viewBox="0 0 150 150"
-            style={{ fill: "#000000" }}
+            style={{ fill: "#f5f5f5" }}
         >
             <g transform="">
                 <g
@@ -29,7 +29,7 @@ const ArrowIcon = () => {
                     style={{mixBlendMode: "normal"}}
                 >
                     <path d="M0,172v-172h172v172z" fill="none" />
-                    <g fill="#000000">
+                    <g fill="#f5f5f5">
                         <path d="M53.24609,68.08333l-10.75,10.75l43.50391,43.5039l43.5039,-43.5039l-10.75,-10.75l-32.7539,32.7539z" />
                     </g>
                 </g>

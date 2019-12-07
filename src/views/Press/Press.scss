@@ -1,6 +1,18 @@
 #press {
     position: relative;
     min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+.cover {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    height: calc(100% - 300px);
+    width: 100%;
+    z-index: -1;
+    background-color: #32373c;
 }
 
 .grid-container {
