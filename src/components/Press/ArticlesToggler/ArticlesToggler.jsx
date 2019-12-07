@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 import './ArticlesToggler.scss';
 import ArrowIcon from '../ArrowIcon';
 
-const ArticlesToggler = ({ isOpen, isAbsolute, handleClickToggler }) => {
+const ArticlesToggler = ({ isOpen, handleClickToggler }) => {
     const togglerText = isOpen ? "Fold Up" : "Show More";
 
     return (
-        <div className={classNames("articles-toggler-container", { "sticky": isOpen && !isAbsolute }, { "absolute": isAbsolute })}>
+        <div className={classNames("articles-toggler-container", { "sticky": isOpen })}>
             <div className="toggler" onClick={handleClickToggler}>
                 <div className={classNames("arrow", { "up": isOpen })}>
                     <ArrowIcon />

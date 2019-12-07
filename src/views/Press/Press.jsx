@@ -6,16 +6,14 @@ import './Press.scss';
 
 const Press = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isAbsolute, setIsAbsolute] = useState(false);
-    const articles = require('./dummy-data.json').dummy;;
+    const articles = require('./dummy-data.json').dummy;
+    const defaultArticles = articles.slice(0, 3);
+    const restOfArticles = articles.slice(3, articles.length);
     const pressSection = useRef();
-    const articlesDiv = useRef();
+    const defaultArticlesDiv = useRef();
+    const restOfArticlesDiv = useRef();
 
-    const maxHeight = isOpen ? articlesDiv.current.scrollHeight + "px" : "";
-
-    document.onscroll = () => {
-        setIsAbsolute(isOpen && (window.pageYOffset < pressSection.current.offsetTop - 525));
-    }
+    const maxHeight = isOpen ? restOfArticlesDiv.current.scrollHeight + "px" : "0";
 
     const handleClickToggler = () => {
         setIsOpen(!isOpen);
@@ -26,16 +24,27 @@ const Press = () => {
             <Header position="center">
                 Press
             </Header>
-            <div ref={articlesDiv} className="grid-container" style={{ maxHeight }}>
+            <div ref={defaultArticlesDiv} className="grid-container initial">
                 {
-                    articles.map(({ img, title, date, author }) => {
+                    defaultArticles.map(({ img, title, date, author, text }) => {
                         return (
-                            <Article img={img} title={title} date={date} author={author} />
+                            <Article img={img} title={title} date={date} author={author} text={text} />
                         )
                     })
                 }
             </div>
-            <ArticlesToggler isOpen={isOpen} isAbsolute={isAbsolute} handleClickToggler={handleClickToggler} />
+            <div>
+                <div ref={restOfArticlesDiv} className="grid-container" style={{ maxHeight }}>
+                    {
+                        restOfArticles.map(({ img, title, date, author, text }) => {
+                            return (
+                                <Article img={img} title={title} date={date} author={author} text={text} />
+                            )
+                        })
+                    }
+                </div>
+                <ArticlesToggler isOpen={isOpen} handleClickToggler={handleClickToggler} />
+            </div>
         </section>
     );
 }

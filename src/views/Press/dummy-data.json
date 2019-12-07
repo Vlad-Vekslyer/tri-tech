@@ -4,73 +4,85 @@
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author1"
+            "author": "Dummy Author1",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author2"
+            "author": "Dummy Author2",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author3"
+            "author": "Dummy Author3",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author4"
+            "author": "Dummy Author4",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author5"
+            "author": "Dummy Author5",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author6"
+            "author": "Dummy Author6",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author7"
+            "author": "Dummy Author7",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author8"
+            "author": "Dummy Author8",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author9"
+            "author": "Dummy Author9",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author10"
+            "author": "Dummy Author10",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author11"
+            "author": "Dummy Author11",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             "img": "dummy-image.jpg",
             "title": "Dummy Title",
             "date": "12/30/2020",
-            "author": "Dummy Author12"
+            "author": "Dummy Author12",
+            "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
         }
     ]
 }

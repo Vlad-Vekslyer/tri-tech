@@ -1,7 +1,8 @@
 import React from "react";
 import "./Article.scss";
+import PropTypes from "prop-types";
 
-const Article = ({ img, title, date, author }) => {
+const Article = ({ img, title, date, author, text }) => {
   return (
     <div className="content card">
       <img className="card-img-top" src={img} alt="Card" />
@@ -11,8 +12,7 @@ const Article = ({ img, title, date, author }) => {
           {date} by {author}
         </p>
         <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {text}
         </p>
         <a href="#" className="btn btn-primary">
           Read more
@@ -20,6 +20,13 @@ const Article = ({ img, title, date, author }) => {
       </div>
     </div>
   );
+};
+
+Article.propTypes = {
+  img: PropTypes.string,
+  title: PropTypes.string,
+  date: PropTypes.string,
+  author: PropTypes.string
 };
 
 export default Article;

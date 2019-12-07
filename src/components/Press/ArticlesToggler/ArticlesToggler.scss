@@ -1,18 +1,8 @@
 .articles-toggler-container {
     display: flex;
     justify-content: center;
-}
-
-.sticky {
     position: sticky;
     bottom: 20px;
-}
-
-.absolute {
-    position: absolute;
-    top: 190px;
-    left: 0;
-    right: 0;
 }
 
 .toggler {
