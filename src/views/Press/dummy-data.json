@@ -1,0 +1,76 @@
+{
+    "dummy": [
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author1"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author2"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author3"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author4"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author5"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author6"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author7"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author8"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author9"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author10"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author11"
+        },
+        {
+            "img": "dummy-image.jpg",
+            "title": "Dummy Title",
+            "date": "12/30/2020",
+            "author": "Dummy Author12"
+        }
+    ]
+}

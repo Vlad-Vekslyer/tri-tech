@@ -5,19 +5,12 @@
 .grid-container {
     margin-top: 15px;
     display: grid;
-    /* grid-gap: 25px; */
-    transition: all 0.5s ease;
-
+    grid-gap: 35px;
     justify-content: space-between;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fill, 450px);
+    grid-template-columns: repeat(auto-fill, 380px);
     height: auto;
-    max-height: 190px;
+    max-height: 250px;
     overflow: hidden;
-
     transition: 0.5s ease;
-}
-
-.show {
-    max-height: 500px;
 }
