@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Header from '../../components/Header/Header';
 import Article from '../../components/Press/Article/Article';
 import ArticlesToggler from '../../components/Press/ArticlesToggler/ArticlesToggler';
-import '../../components/App.scss';
+import '../../styles/container.scss';
 import './Press.scss';
 
 const Press = () => {
