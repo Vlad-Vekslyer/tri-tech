@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from "react";
+import HexaTriangle from "./HexaTriangle.js";
 
 let frame = 0;
 // determines whether animation should start reversing
@@ -67,86 +68,24 @@ function animate(context, props){
 function createHexagon(context, props){
   let {startX, startY, speedRate, delay, size} = props;
   let speed = (frame / speedRate) - (delay / speedRate);
-  // each of the drawings below is a triangle that composes the hexagon
-
-  // top left
   // don't animate if the frame is not past the delay value
   let center = frame > delay ? [startX - speed * 1.5, startY - speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] - size, center[1]);
-  context.lineTo(center[0] - (size / 2), center[1] - size);
-  context.lineTo(center[0], center[1]);
-  let gradient = context.createLinearGradient(center[0] - (size / 2), center[1] - size, center[0] - (size / 2), center[1] + size * 1.5);
-  gradient.addColorStop(0, "#3898EC");
-  gradient.addColorStop(1, "rgba(255,255,255,0.6)");
-  context.fillStyle = gradient;
-  context.fill();
+  new HexaTriangle(center, size, {vertical: "top", horizontal: "left"}, "#3898EC");
 
-  // top middle
   center = frame > delay ? [startX, startY - speed * 1.3] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] - (size / 2), center[1] - size);
-  context.lineTo(center[0] - (size / 2) + size, center[1] - size);
-  context.lineTo(center[0], center[1]);
-  gradient = context.createLinearGradient(center[0], center[1] - size, center[0], center[1] + size * 2.5);
-  gradient.addColorStop(0, "#2585D9");
-  gradient.addColorStop(1, "rgba(255,255,255,0.6)");
-  context.fillStyle = gradient;
-  context.fill();
+  new HexaTriangle(center, size, {vertical: "top", horizontal: "middle"}, "#2585D9");
 
-  // top right
   center = frame > delay ? [startX + speed * 1.5, startY - speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] + size, center[1]);
-  context.lineTo(center[0] + (size / 2), center[1] - size);
-  context.lineTo(center[0], center[1]);
-  gradient = context.createLinearGradient(center[0] + (size / 2), center[1] - size, center[0] + (size / 2), center[1] + size * 2.5);
-  gradient.addColorStop(0, "#0D64B1");
-  gradient.addColorStop(1, "rgba(255,255,255,0.6)");
-  context.fillStyle = gradient;
-  context.fill();
+  new HexaTriangle(center, size, {vertical: "top", horizontal: "right"}, "#0D64B1");
 
-  // bottom right
   center = frame > delay ? [startX + speed * 1.5, startY + speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] + size, center[1]);
-  context.lineTo(center[0] + (size / 2), center[1] + size);
-  context.lineTo(center[0], center[1]);
-  gradient = context.createLinearGradient(center[0] + (size / 2), center[1], center[0] + (size / 2), center[1] + size * 3);
-  gradient.addColorStop(0, "#3898EC");
-  gradient.addColorStop(1, "rgba(255,255,255,0.6)");
-  context.fillStyle = gradient;
-  context.fill();
+  new HexaTriangle(center, size, {vertical: "bottom", horizontal: "right"}, "#3898EC");
 
-  // bottom middle
   center = frame > delay ? [startX, startY + speed * 1.3] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] - (size / 2), center[1] + size);
-  context.lineTo(center[0] - (size / 2) + size, center[1] + size);
-  context.lineTo(center[0], center[1]);
-  gradient = context.createLinearGradient(center[0], center[1], center[0], center[1] + size * 3);
-  gradient.addColorStop(0, "#79C1FF");
-  gradient.addColorStop(1, "rgba(255,255,255,0.6)");
-  context.fillStyle = gradient;
-  context.fill();
+  new HexaTriangle(center, size, {vertical: "bottom", horizontal: "middle"}, "#79C1FF");
 
-  // bottom left
   center = frame > delay ? [startX - speed * 1.5, startY + speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] - size, center[1]);
-  context.lineTo(center[0] - (size / 2), center[1] + size);
-  context.lineTo(center[0], center[1]);
-  gradient = context.createLinearGradient(center[0] - (size / 2), center[1], center[0] - (size / 2), center[1] + size * 3);
-  gradient.addColorStop(0, "#52AAF6");
-  gradient.addColorStop(1, "rgba(255,255,255,0.6)");
-  context.fillStyle = gradient;
-  context.fill();
+  new HexaTriangle(center, size, {vertical: "bottom", horizontal: "left"}, "#52AAF6");
 }
 
 function Animation(props){
@@ -154,6 +93,7 @@ function Animation(props){
   useEffect(() => {
     if(canvas.current){
       let context = canvas.current.getContext('2d');
+      HexaTriangle.setContext(context);
       animate(context, props);
     }
   }, [])
