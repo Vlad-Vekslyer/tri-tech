@@ -33,10 +33,6 @@
             grid-template-columns: repeat(3, minmax(190px, 380px));
             grid-auto-rows: 400px;
         }
-        @include break(md) {
-            grid-template-columns: repeat(3, minmax(190px, 380px));
-            grid-auto-rows: 400px;
-        }
         @include break(lg) {
             grid-template-columns: repeat(3, minmax(190px, 380px));
             grid-auto-rows: 450px;
