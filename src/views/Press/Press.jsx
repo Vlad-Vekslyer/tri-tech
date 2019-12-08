@@ -28,9 +28,9 @@ const Press = () => {
             </Header>
             <div ref={defaultArticlesDiv} className="grid-container initial">
                 {
-                    defaultArticles.map(({ id, img, title, date, author, text }) => {
+                    defaultArticles.map((articles) => {
                         return (
-                            <Article key={id} img={img} title={title} date={date} author={author} text={text} />
+                            <Article {...articles} />
                         )
                     })
                 }
@@ -38,9 +38,9 @@ const Press = () => {
             <div>
                 <div ref={restOfArticlesDiv} className="grid-container" style={{ maxHeight, marginBottom: isOpen && "35px" }}>
                     {
-                        restOfArticles.map(({ id, img, title, date, author, text }) => {
+                        restOfArticles.map((articles) => {
                             return (
-                                <Article key={id} img={img} title={title} date={date} author={author} text={text} />
+                                <Article {...articles} />
                             )
                         })
                     }
