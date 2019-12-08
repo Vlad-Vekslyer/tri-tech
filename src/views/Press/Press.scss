@@ -5,6 +5,10 @@
     min-height: 100vh;
     padding-bottom: 50px;
 
+    @include break(sm, true) {
+        color: #f2f1ef;
+        background-color: #32373c;
+    }
     .cover {
         position: absolute;
         top: 300px;
@@ -13,6 +17,7 @@
         height: calc(100% - 300px);
         width: 100%;
         z-index: -1;
+        color: #32373c;
         background-color: #32373c;
     }
 
