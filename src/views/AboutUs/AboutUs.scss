@@ -1,4 +1,4 @@
-@import "../../GrobalSass/mixin.scss";
+@import "../../styles/breakpoints";
 
 .aboutus-container {
   display: flex;
@@ -9,6 +9,38 @@
 
   @include break(lg) {
     flex-direction: row;
+  }
+
+  img {
+    display: block;
+    margin-top: 60px;
+    width: 300px;
+    height: 250px;
+  
+    margin-right: auto;
+    margin-left: auto;
+  
+    @include break(sm) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 100px;
+      width: 500px;
+      height: 400px;
+    }
+    @include break(mdlg) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 150px;
+      width: 600px;
+      height: 400px;
+    }
+  
+    @include break(lg) {
+      margin-top: 200px;
+      margin-right: 100px;
+      width: 600px;
+      height: 500px;
+    }
   }
 }
 
@@ -32,7 +64,6 @@
     margin-top: 150px;
     width: 500px;
   }
-}
 
 .aboutus-paragraph {
   width: 450px;
@@ -70,34 +101,4 @@
   }
 }
 
-img {
-  display: block;
-  margin-top: 60px;
-  width: 300px;
-  height: 250px;
-
-  margin-right: auto;
-  margin-left: auto;
-
-  @include break(sm) {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 100px;
-    width: 500px;
-    height: 400px;
-  }
-  @include break(mdlg) {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 150px;
-    width: 600px;
-    height: 400px;
-  }
-
-  @include break(lg) {
-    margin-top: 200px;
-    margin-right: 100px;
-    width: 600px;
-    height: 500px;
-  }
 }

@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Header from '../../components/Header/Header';
 import Article from '../../components/Press/Article/Article';
 import ArticlesToggler from '../../components/Press/ArticlesToggler/ArticlesToggler';
-import '../../components/App.css';
+import '../../components/App.scss';
 import './Press.scss';
 
 const Press = () => {
@@ -28,19 +28,19 @@ const Press = () => {
             </Header>
             <div ref={defaultArticlesDiv} className="grid-container initial">
                 {
-                    defaultArticles.map(({ img, title, date, author, text }) => {
+                    defaultArticles.map(({ id, img, title, date, author, text }) => {
                         return (
-                            <Article img={img} title={title} date={date} author={author} text={text} />
+                            <Article key={id} img={img} title={title} date={date} author={author} text={text} />
                         )
                     })
                 }
             </div>
             <div>
-                <div ref={restOfArticlesDiv} className="grid-container" style={{ maxHeight }}>
+                <div ref={restOfArticlesDiv} className="grid-container" style={{ maxHeight, marginBottom: isOpen && "35px" }}>
                     {
-                        restOfArticles.map(({ img, title, date, author, text }) => {
+                        restOfArticles.map(({ id, img, title, date, author, text }) => {
                             return (
-                                <Article img={img} title={title} date={date} author={author} text={text} />
+                                <Article key={id} img={img} title={title} date={date} author={author} text={text} />
                             )
                         })
                     }
