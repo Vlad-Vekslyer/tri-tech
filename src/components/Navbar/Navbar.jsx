@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './Navbar.css';
+import './Navbar.scss';
 import Icon from './Icon.jsx';
 import classnames from "classnames";
 

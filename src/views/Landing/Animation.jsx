@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from "react";
 import HexaTriangle from "./HexaTriangle.js";
+import './Animation.scss';
 
 let frame = 0;
 // determines whether animation should start reversing
@@ -8,7 +9,7 @@ let hexagonProps = [];
 
 // to create a new hexagon, push an object to the hexagonProps array
 hexagonProps.push({
-  startX: 400,
+  startX: 500,
   startY: 250,
   speedRate: 8,
   size: 150,
@@ -16,7 +17,7 @@ hexagonProps.push({
 });
 
 hexagonProps.push({
-  startX: 600,
+  startX: 700,
   startY: 150,
   speedRate: 15,
   size: 50,
@@ -24,7 +25,7 @@ hexagonProps.push({
 });
 
 hexagonProps.push({
-  startX: 200,
+  startX: 300,
   startY: 75,
   speedRate: 25,
   size: 50,
@@ -32,7 +33,7 @@ hexagonProps.push({
 });
 
 hexagonProps.push({
-  startX: 150,
+  startX: 250,
   startY: 450,
   speedRate: 15,
   size: 30,
@@ -40,7 +41,7 @@ hexagonProps.push({
 });
 
 hexagonProps.push({
-  startX: 280,
+  startX: 380,
   startY: 500,
   speedRate: 15,
   size: 30,
@@ -48,7 +49,7 @@ hexagonProps.push({
 });
 
 hexagonProps.push({
-  startX: 600,
+  startX: 700,
   startY: 450,
   speedRate: 30,
   size: 30,
@@ -99,7 +100,7 @@ function Animation(props){
   }, [])
   return(
     <>
-      <canvas style={{position: "absolute", right: "30px"}} ref={canvas} width={props.width} height={props.height}/>
+      <canvas ref={canvas} width={props.width} height={props.height}/>
     </>
   )
 }
