@@ -1,8 +1,9 @@
 #Card {
     background-color: #fff;
-    min-width: 380px;
-    max-width: 380px;
+    min-width: 23.75em;
+    max-width: 23.75em;
     padding: 5px;
+    margin: 10px;
     display: table-cell;
     /* vertical-align: middle */
 }

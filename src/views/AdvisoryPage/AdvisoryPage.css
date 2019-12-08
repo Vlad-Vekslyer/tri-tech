@@ -1,14 +1,17 @@
+body {
+    /* because image is bigger than expected */
+    overflow: hidden;
+
+}
 /* -------------------------- */
 /* |        pointer         | */
 /* -------------------------- */
 #adviser {
     width: 100%;
     min-height: 100vh;
-    background: url(../../assets/world-miniMap.svg) center center fixed no-repeat ;
 }
 #country {
     display: block;
-    width: fit-content;
     cursor: default;
     text-align: center;
 }
@@ -24,26 +27,28 @@
 /* |         card           | */
 /* -------------------------- */
 .close {
-    position: absolute;
-    right: 0;
+    position: fixed;
+    /* transform: translateX(26.5em); */
     padding: 0px 8px;
     color: #dddddd;
     font-size: 28px;
     font-weight: bold;
     user-select: none;
 }
-
-.card-open > .close:hover,.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.card-component {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 48.80em;
+    
 }
 .card-contents {
+    min-width: 50%;
+    max-width: 100%;
+    overflow-x: auto;
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    margin-top: 15%;
-    margin-left: 5%;
     transition: .4s;
     border: 2px solid #dddddd;
 }
@@ -51,7 +56,12 @@
     visibility: visible;
     opacity: 1;
     transition: .4s;
-    z-index: 1;
+    z-index: 2;
+}
+.card-open > .close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 /*--------------------------*/
 /*|        vector          |*/
@@ -61,36 +71,36 @@
 }
 #adviser .vector1{
     position: absolute;
-    top: 22em;
-    left: 23em;
+    top: 22.5em;
+    left: 40.5em;
 }
 #adviser .vector2 {
     position: absolute;
-    top: 19.7em;
-    left: 14em;
+    top: 24em;
+    left: 28em;
 }
 #adviser .vector3 {
     position: absolute;
-    top: 23.5em;
-    left: 15em;
+    top: 28.5em;
+    left: 29.5em;
 }
-/* #adviser .vector4 {
-    position: absolute;
-    top: 23em;
-    left: 20em;
-} */
-/* #adviser .vector5 {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-} */
-#adviser .vector6 {
+#adviser .vector4 {
     position: absolute;
     top: 26.5em;
-    left: 19em;
+    left: 42em;
 }
-/* #adviser .vector7 {
+#adviser .vector5 {
     position: absolute;
-    top: 50%;
-    left: 25%;
-} */
+    top: 28em;
+    left: 37em;
+}
+#adviser .vector6 {
+    position: absolute;
+    top: 31.5em;
+    left: 34.5em;
+}
+#adviser .vector7 {
+    position: absolute;
+    top: 23em;
+    left: 70em;
+}

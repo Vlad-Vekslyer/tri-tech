@@ -4,6 +4,7 @@ import "./AdvisoryPage.css";
 import Card from "../../components/Card/Card.jsx"
 import CardData from "./AdvisoryStore"
 import vector from "../../assets/Vector.png"
+import map from "../../assets/worldmap.svg"
 
 const AdvisoryPage = () => {
     //for test code---
@@ -18,15 +19,18 @@ const AdvisoryPage = () => {
     let cities = Object.keys(CardData).map(city => {
         let cards = CardData[city].map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
         return (
+            <>
             <div id={city} className="card-contents">
                 <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
                 {cards}
             </div>
+            </>
         );
     });
 
     function mouseClickHandlar(place) {
         if(!isClicked || isClosed){
+            console.log("clicked")
             document.getElementById(place).classList.toggle('card-open')
             locate = place
             isClicked = !isClicked
@@ -44,6 +48,7 @@ const AdvisoryPage = () => {
         <div id="adviser" className="adviser">   
             <div id="country">
                 {/* mouseClickHandlar(props) <= should be properties*/}
+                <img src={map}></img>
                 <div className="vector vector1"><img className="point" onClick={() => mouseClickHandlar("chicago")} src={vector} ></img><p>Chicago</p></div>
                 <div className="vector vector2"><img className="point" onClick={() => mouseClickHandlar("van")} src={vector} ></img><p>Vancouver</p></div>
                 <div className="vector vector3"><img className="point" onClick={() => mouseClickHandlar("la")} src={vector} ></img><p>Los Angels</p></div>

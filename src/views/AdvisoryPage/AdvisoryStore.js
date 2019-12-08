@@ -144,24 +144,24 @@ const CardData = {
             location: 'Berlin',
             text: txt
         },
-        // {
-        //     card_id: 4,
-        //     name: "jhon",
-        //     location: 'Berlin',
-        //     text: txt
-        // },
-        // {
-        //     card_id: 5,
-        //     name: "jean",
-        //     location: 'Berlin',
-        //     text: txt
-        // },
-        // {
-        //     card_id: 6,
-        //     name: "jhon",
-        //     location: 'Berlin',
-        //     text: txt
-        // }
+        {
+            card_id: 4,
+            name: "jhon",
+            location: 'Berlin',
+            text: txt
+        },
+        {
+            card_id: 5,
+            name: "jean",
+            location: 'Berlin',
+            text: txt
+        },
+        {
+            card_id: 6,
+            name: "jhon",
+            location: 'Berlin',
+            text: txt
+        }
     ]
 }
 
