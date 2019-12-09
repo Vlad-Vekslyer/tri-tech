@@ -5,8 +5,9 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 40px;
 
+  background-color: #32373c;
+  color: #fff;
   @include break(lg) {
     flex-direction: row;
   }
@@ -27,28 +28,21 @@
   }
 
   @include break(lg) {
+    font-size: 48px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 200px;
     width: 500px;
   }
 }
 
 .aboutus-paragraph {
   width: 450px;
-
   margin-left: auto;
   margin-right: auto;
-
-  border: 1px none #6c7a89;
-
-  opacity: 0.6;
-  font-style: normal;
   text-align: left;
-  text-decoration: none;
-  font-family: Montserrat, sans-serif;
-  color: #1a1b1f;
-  font-size: 12px;
+  color: #e5e5e5;
+  font-size: 16px;
   line-height: 28px;
   margin: 10px auto;
   width: 300px;
@@ -65,16 +59,16 @@
   @include break(lg) {
     margin-left: auto;
     margin-right: auto;
-    font-size: 20px;
+    font-size: 16px;
     width: 500px;
   }
 }
 
-img {
+.aboutus-img {
   display: block;
   margin-top: 60px;
-  width: 300px;
-  height: 250px;
+  width: 335px;
+  height: 180.35px;
 
   margin-right: auto;
   margin-left: auto;
@@ -83,10 +77,9 @@ img {
     margin-right: auto;
     margin-left: auto;
     margin-top: 100px;
-    width: 500px;
-    height: 400px;
   }
-  @include break(mdlg) {
+
+  @include break(md) {
     margin-right: auto;
     margin-left: auto;
     margin-top: 150px;
@@ -97,7 +90,7 @@ img {
   @include break(lg) {
     margin-top: 200px;
     margin-right: 100px;
-    width: 600px;
-    height: 500px;
+    width: 497px;
+    height: 319px;
   }
 }
