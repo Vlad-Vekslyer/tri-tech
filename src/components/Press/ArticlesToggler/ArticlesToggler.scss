@@ -2,28 +2,29 @@
     display: flex;
     justify-content: center;
     position: sticky;
-    bottom: 30px;
-}
+    bottom: 50px;
 
-.toggler {
-    display: flex;
-    cursor: pointer;
-    height: 25px;
-    line-height: 25px;
-    padding: 10px 10px 10px 20px;
-    color: #f5f5f5;
-    background-color: #068dc2;
-}
+    .toggler {
+        display: flex;
+        cursor: pointer;
+        font-size: 20px;
+        height: 30px;
+        line-height: 30px;
+        padding: 10px 10px 10px 20px;
+        color: #f5f5f5;
+        background-color: #068dc2;
 
-.arrow {
-    display: inline-block;
-    margin-right: 5px;
-    transition: 0.5s;
-    svg {
-        height: 20px;
+        .arrow {
+            display: inline-block;
+            margin-right: 5px;
+            transition: 0.5s;
+            svg {
+                height: 25px;
+            }
+        }
+    
+        .up {
+            transform: rotateX(-180deg);
+        }
     }
-}
-
-.up {
-    transform: rotateX(-180deg);
 }
