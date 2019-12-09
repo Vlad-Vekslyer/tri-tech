@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Slider from "react-slick";
 import "./AdvisoryPage.css";
 
 import Card from "../../components/Card/Card.jsx"
@@ -13,7 +14,6 @@ const AdvisoryPage = () => {
     let isClosed = false;
     // -----------------
 
-    // let chicagoCards = CardData.chicago.map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
     // Object.map then Array.map
     //city is key for object, cards is an object
     let cities = Object.keys(CardData).map(city => {
@@ -21,8 +21,8 @@ const AdvisoryPage = () => {
         return (
             <>
             <div id={city} className="card-contents">
-                <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
                 {cards}
+                <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
             </div>
             </>
         );
