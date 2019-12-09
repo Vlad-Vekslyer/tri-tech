@@ -1,15 +1,16 @@
 .header-container {
-    display: inline-block;
-    margin: 0;
+    margin: 40px 0;
 }
 
 .header-container h1 {
-    margin: 0 auto 0 50px;
-    text-align: center;
+    display: inline-block;
+    margin: 0;
+    font-size: 40px;
 }
 
 .left {
     text-align: left;
+    margin: 0 auto 0 50px;
 }
 
 .center {
@@ -17,7 +18,7 @@
 }
 
 .large {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .underline {

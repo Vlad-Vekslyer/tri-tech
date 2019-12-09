@@ -1,0 +1,94 @@
+@import '../../GlobalSass/mixin.scss';
+
+div {
+  background-color: white;
+}
+
+button {
+  border: none;
+  padding: 17px 0;
+  font-size: 1.2em;
+  background-color: #3898EC;
+  color: white;
+  font-family: Roboto;
+}
+
+div.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: rgba(34,34,34, 0.6);
+}
+
+ul.top {
+  padding: 20px 5px 0 10px;
+}
+
+ul li:hover {
+  cursor: pointer;
+}
+
+li.end li {
+  padding: 5px 20px;
+}
+
+li.hamburger, ul.dropdown {
+  display: none;
+}
+
+li.hamburger > span {
+  background-color: black;
+  margin: 2px 0;
+  width: 30px;
+  height: 6px;
+  display: inherit;
+}
+
+li.main {
+  display: inline-block;
+}
+
+@include break(md, true){
+  li.hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li.middle, li.end {
+    display:none;
+  }
+
+  ul.drop {
+    z-index: 0;
+    animation: drop 500ms;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  ul.dropdown li {
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes drop{
+  from {
+    top: -126px;
+  }
+  to {
+    top: 0;
+  }
+}
