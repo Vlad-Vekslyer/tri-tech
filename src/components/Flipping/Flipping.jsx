@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Flipping.css";
 
 const Flipping = props => {
@@ -14,6 +15,13 @@ const Flipping = props => {
       </div>
     </div>
   );
+};
+
+Flipping.propTypes = {
+  h: PropTypes.string,
+  w: PropTypes.string,
+  front: PropTypes.string,
+  back: PropTypes.string
 };
 
 export default Flipping;
