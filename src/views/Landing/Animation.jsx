@@ -1,4 +1,6 @@
 import React, {useRef, useEffect} from "react";
+import HexaTriangle from "./HexaTriangle.js";
+import './Animation.scss';
 
 let frame = 0;
 // determines whether animation should start reversing
@@ -7,20 +9,53 @@ let hexagonProps = [];
 
 // to create a new hexagon, push an object to the hexagonProps array
 hexagonProps.push({
-  startX: 400,
-  startY: 200,
-  speedRate: 20,
+  startX: 500,
+  startY: 250,
+  speedRate: 8,
   size: 150,
-  delay: 5
+  delay: 80
 });
 
 hexagonProps.push({
-  startX: 550,
-  startY: 80,
+  startX: 700,
+  startY: 150,
   speedRate: 15,
-  size: 60,
-  delay: 30
+  size: 50,
+  delay: 50
 });
+
+hexagonProps.push({
+  startX: 300,
+  startY: 75,
+  speedRate: 25,
+  size: 50,
+  delay: 10
+});
+
+hexagonProps.push({
+  startX: 250,
+  startY: 450,
+  speedRate: 15,
+  size: 30,
+  delay: 10
+});
+
+hexagonProps.push({
+  startX: 380,
+  startY: 500,
+  speedRate: 15,
+  size: 30,
+  delay: 50
+});
+
+hexagonProps.push({
+  startX: 700,
+  startY: 450,
+  speedRate: 30,
+  size: 30,
+  delay: 80
+});
+
 
 function animate(context, props){
   requestAnimationFrame(() => animate(context, props));
@@ -28,68 +63,30 @@ function animate(context, props){
   hexagonProps.forEach(props => createHexagon(context, props));
   frame = reverse ? frame - 1 : frame + 1;
   if(frame == 0) reverse = false;
-  else if(frame == 180) reverse = true;
+  else if(frame == 200) reverse = true;
 }
 
 function createHexagon(context, props){
   let {startX, startY, speedRate, delay, size} = props;
   let speed = (frame / speedRate) - (delay / speedRate);
-  // each of the drawings below is a triangle that composes the hexagon
-
-  // top left
   // don't animate if the frame is not past the delay value
-  let center = frame > delay ? [startX - speed, startY - speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] - size, center[1]);
-  context.lineTo(center[0] - (size / 2), center[1] - size);
-  context.lineTo(center[0], center[1]);
-  context.stroke();
+  let center = frame > delay ? [startX - speed * 1.5, startY - speed] : [startX, startY];
+  new HexaTriangle(center, size, {vertical: "top", horizontal: "left"}, "#3898EC");
 
-  // top middle
-  center = frame > delay ? [startX, startY - speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] - (size / 2), center[1] - size);
-  context.lineTo(center[0] - (size / 2) + size, center[1] - size);
-  context.lineTo(center[0], center[1]);
-  context.stroke();
+  center = frame > delay ? [startX, startY - speed * 1.3] : [startX, startY];
+  new HexaTriangle(center, size, {vertical: "top", horizontal: "middle"}, "#2585D9");
 
-  // top right
-  center = frame > delay ? [startX + speed, startY - speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] + size, center[1]);
-  context.lineTo(center[0] + (size / 2), center[1] - size);
-  context.lineTo(center[0], center[1]);
-  context.stroke();
+  center = frame > delay ? [startX + speed * 1.5, startY - speed] : [startX, startY];
+  new HexaTriangle(center, size, {vertical: "top", horizontal: "right"}, "#0D64B1");
 
-  // bottom right
-  center = frame > delay ? [startX + speed, startY + speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] + size, center[1]);
-  context.lineTo(center[0] + (size / 2), center[1] + size);
-  context.lineTo(center[0], center[1]);
-  context.stroke();
+  center = frame > delay ? [startX + speed * 1.5, startY + speed] : [startX, startY];
+  new HexaTriangle(center, size, {vertical: "bottom", horizontal: "right"}, "#3898EC");
 
-  // bottom middle
-  center = frame > delay ? [startX, startY + speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] - (size / 2), center[1] + size);
-  context.lineTo(center[0] - (size / 2) + size, center[1] + size);
-  context.lineTo(center[0], center[1]);
-  context.stroke();
-  
-  // bottom left
-  center = frame > delay ? [startX - speed, startY + speed] : [startX, startY];
-  context.beginPath();
-  context.moveTo(center[0], center[1]);
-  context.lineTo(center[0] - size, center[1]);
-  context.lineTo(center[0] - (size / 2), center[1] + size);
-  context.lineTo(center[0], center[1]);
-  context.stroke();
+  center = frame > delay ? [startX, startY + speed * 1.3] : [startX, startY];
+  new HexaTriangle(center, size, {vertical: "bottom", horizontal: "middle"}, "#79C1FF");
+
+  center = frame > delay ? [startX - speed * 1.5, startY + speed] : [startX, startY];
+  new HexaTriangle(center, size, {vertical: "bottom", horizontal: "left"}, "#52AAF6");
 }
 
 function Animation(props){
@@ -97,6 +94,7 @@ function Animation(props){
   useEffect(() => {
     if(canvas.current){
       let context = canvas.current.getContext('2d');
+      HexaTriangle.setContext(context);
       animate(context, props);
     }
   }, [])

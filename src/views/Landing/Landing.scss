@@ -1,0 +1,68 @@
+@import '../../GlobalSass/mixin.scss';
+
+section#text {
+  margin-left: 10%;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-size: 50px;
+    margin: 10px 0;
+    font-family: "Abril Fatface";
+    font-weight: normal;
+  }
+
+  p {
+    margin-bottom: 40px;
+    color: #858585;
+    width: 80%;
+  }
+
+  button {
+    width: 160px;
+  }
+
+  @include break(xs, true){
+    margin-top: 85% !important;
+  }
+
+  @include break(sm, true) {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+    margin-top: 70%;
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  @include break(sm) {
+    width: 60%;
+    margin-top: 50%;
+    p {
+      width: 80%;
+    }
+  }
+
+  @include break(md, true) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  @include break(md) {
+    margin-top: 10%;
+  }
+
+  @include break(lg) {
+    width: 40%;
+
+
+    p {
+      width: 60%;
+    }
+  }
+}
