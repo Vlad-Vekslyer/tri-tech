@@ -1,15 +1,8 @@
-import React from 'react';
-import './App.css';
-import Navbar from "./Navbar/Navbar.jsx";
-import Landing from "../views/Landing/Landing.jsx";
+import React from "react";
+import "./App.css";
 
 function App() {
-  return(
-    <>
-      <Navbar/>
-      <Landing/>
-    </>
-  );
+  return <></>;
 }
 
 export default App;

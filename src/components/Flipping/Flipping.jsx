@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "./Flipping.css";
 
 const Flipping = props => {
   const pStyles = {
