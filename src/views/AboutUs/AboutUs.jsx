@@ -14,7 +14,7 @@ const AboutUs = () => {
   return (
     <section className="aboutus-container">
       <div>
-        <img clsssNmae="aboutus-img" src={img} alt="" />
+        <img className="aboutus-img" src={img} alt="" />
       </div>
       <div>
         <h2 className="aboutus-title">About Us</h2>

@@ -18,21 +18,7 @@ const Card = (props) => {
     )
 }
 
-// const Card = ({imageUrl, text, name, location}) => {
-//     return (
-//         <>
-//             <div className="Card">
-//                 <p> 
-//                     {imageUrl && <img src={imageUrl} alt="person-face_img" width="100" />}
-//                     <span>{name} {location}</span><br/>
-//                     {text}
-//                 </p>
-//             </div>
-//         </>
-//     )
-// }
-
-Card.propType = {
+Card.propTypes = {
     imageUrl: PropTypes.string,
     text: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

@@ -1,0 +1,51 @@
+@import '../../styles/breakpoints';
+
+#press {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    @include break(lg, true) {
+        color: #f2f1ef;
+        background-color: #32373c;
+    }
+    .cover {
+        position: absolute;
+        top: 300px;
+        left: 0;
+        right: 0;
+        height: calc(100% - 300px);
+        width: 100%;
+        z-index: -1;
+        color: #32373c;
+        background-color: #32373c;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-column-gap: 35px;
+        grid-row-gap: 40px;
+        justify-content: space-between;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 450px;
+        @include break(md) {
+            grid-template-columns: repeat(3, minmax(190px, 380px));
+            grid-auto-rows: 400px;
+        }
+        @include break(lg) {
+            grid-template-columns: repeat(3, minmax(190px, 380px));
+            grid-auto-rows: 450px;
+            grid-row-gap: 60px;
+        }
+        overflow: hidden;
+        transition: 0.5s ease;
+    }
+
+    .initial {
+        margin-bottom: 40px;
+        @include break(lg) {
+            margin-bottom: 60px;
+        }
+    }
+}

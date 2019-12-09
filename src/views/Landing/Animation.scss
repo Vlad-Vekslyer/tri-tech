@@ -1,0 +1,24 @@
+@import '../../styles/_breakpoints.scss';
+
+canvas {
+  position: absolute;
+  right: 0;
+
+  @include break(xs, true){
+    width: 550px;
+    height: 400px;
+  }
+
+  @include break(sm) {
+    width: 800px;
+  }
+
+  @include break(xs){
+    height: 500px;
+  }
+
+  @include break(lg){
+    height: 600px;
+    right: 100px;
+  }
+}

@@ -1,43 +1,42 @@
 import React, {useState} from "react";
-import './Navbar.css';
+import './Navbar.scss';
 import Icon from './Icon.jsx';
 import classnames from "classnames";
 
 function Navbar(){
   let [isDrop, setDrop] = useState(false);
   return(
-    <div>
+    <nav>
       <div className="container">
         <ul className="top">
-          <li className="main">
+          <li className="start">
             <Icon/>
           </li>
-          <li onClick={() => setDrop(!isDrop)} className="hamburger">
+          <li onClick={() => setDrop(true)} className="hamburger">
             <span></span>
             <span></span>
             <span></span>
-          </li>
-          <li className="middle">
-            <ul>
-              <li>About</li>
-              <li>Team</li>
-              <li>Press</li>
-              <li>Contact Info</li>
-            </ul>
           </li>
           <li className="end">
-            <button>Contact Us</button>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Team</li>
+              <li>Network</li>
+              <li>Contact</li>
+            </ul>
           </li>
         </ul>
-        <ul className={classnames('dropdown', {drop : isDrop})}>
-          <li>About</li>
-          <li>Team</li>
-          <li>Press</li>
-          <li>Contact Info</li>
-          <button>Contact Us</button>
+        <ul className={classnames('dropdown', {dropped : isDrop})}>
+          <li onClick={() => setDrop(false)} className="exit">X</li>
+          <li>HOME</li>
+          <li>ABOUT</li>
+          <li>TEAM</li>
+          <li>NETWORK</li>
+          <li>CONTACT</li>
         </ul>
       </div>
-    </div>
+    </nav>
   )
 }
 

@@ -1,11 +1,13 @@
-@import "../../GrobalSass/mixin.scss";
+@import "../../GlobalSass/mixin.scss";
 
 .aboutus-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
+  background-color: #32373c;
+  color: #fff;
+  min-height: 100vh;
   background-color: #32373c;
   color: #fff;
   @include break(lg) {
@@ -31,7 +33,7 @@
     font-size: 48px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 200px;
+    margin-top: 180px;
     width: 500px;
   }
 }

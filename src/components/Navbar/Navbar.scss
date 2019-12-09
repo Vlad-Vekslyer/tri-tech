@@ -1,0 +1,113 @@
+@import '../../GlobalSass/mixin.scss';
+
+nav {
+  background-color: white;
+
+  button {
+    border: none;
+    padding: 17px 0;
+    font-size: 1.2em;
+    background-color: #3898EC;
+    color: white;
+    cursor: pointer;
+    font-family: Roboto;
+  }
+
+  div.container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  ul {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: rgba(34,34,34, 0.6);
+
+    li:hover {
+      cursor: pointer;
+      color: #068DC2;
+    }
+  }
+
+  ul.top {
+    padding-top: 20px;
+  }
+
+  li.end li {
+    padding: 5px 20px;
+  }
+
+  li.hamburger, ul.dropdown {
+    display: none;
+  }
+
+  li.hamburger > span {
+    background-color: black;
+    margin: 2px 0;
+    width: 30px;
+    height: 6px;
+    display: inherit;
+  }
+
+  li.start {
+    display: inline-block;
+  }
+
+  @include break(md, true){
+    li.hamburger {
+      display: flex;
+      flex-direction: column;
+    }
+
+    li.end {
+      display:none;
+    }
+
+    ul.dropped {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      justify-content: flex-start;
+      animation: drop 500ms;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+
+      li {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px 0;
+        padding-left: 17%;
+      }
+
+      li.exit {
+        padding: 20px 20px 0 0;
+        font-size: 30px;
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+
+
+@keyframes drop{
+  from {
+    top: -126px;
+  }
+  to {
+    top: 0;
+  }
+}

@@ -1,0 +1,11 @@
+@import './breakpoints';
+
+.container {
+    padding: 25px 10px;
+    @include break(sm) {
+      padding: 30px 50px;
+    }
+    @include break(mdlg) {
+      padding: 30px 100px;
+    }
+  }

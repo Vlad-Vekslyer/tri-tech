@@ -1,13 +1,8 @@
 import React from "react";
-import "./App.css";
-import AboutUs from "../views/AboutUs/AboutUs";
+import "./App.scss";
 
 function App() {
-  return (
-    <>
-      <AboutUs />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
