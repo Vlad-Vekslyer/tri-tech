@@ -17,7 +17,7 @@ const AdvisoryPage = () => {
     // Object.map then Array.map
     //city is key for object, cards is an object
     let cities = Object.keys(CardData).map(city => {
-        let cards = CardData[city].map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
+        let cards = CardData[city].map((card, index) => <><div><Card key={index} text={card.text} name={card.name} location={card.location}/></div></>);
         return (
             <>
             <div id={city} className="card-contents">
