@@ -10,12 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
+
   }
-  .container {
-    width: 90%;
-    margin-left: 8%;
-  }
-  
+
   #contactTitle {
     width: 100%;
     text-align: center;
@@ -32,7 +29,7 @@ body {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-  
+
     margin-bottom: 50px;
   }
   #contactPersonal {
@@ -67,7 +64,7 @@ body {
     font-size: 18px;
     border-color: #068dc2;
   }
-  
+
   #message {
     float: right;
     font-family: Roboto;
@@ -83,7 +80,7 @@ body {
     padding: 12px 20px;
     border-color: #068dc2;
   }
-  
+
   #userlogo {
     position: absolute;
     margin-top: 5px;
@@ -155,7 +152,7 @@ body {
     height: 400px;
     frameborder: 0 style= "border:0;" allowfullscreen= "";
   }
-  
+
   #copyright {
     font-family: Roboto;
     font-style: normal;
