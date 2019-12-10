@@ -1,83 +1,96 @@
-#map {
-    display: block;
-    cursor: default;
-    text-align: center;
-    height: 90vh;
-    width: 100%;
+section#advisory-network {
+  position: relative;
 
-    .point {
-        position: relative;
-        cursor: pointer;
-        z-index: 0;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    polygon, path {
-      fill: #ECECEC;
-    }
-
-    path.city:hover, path.pointer:hover {
-      cursor: pointer;
-    }
-
-    path.city {
-      fill: black;
-    }
-
-    path.pointer {
-      fill: #068DC2;
-    }
-}
-/* -------------------------- */
-/* |         card           | */
-/* -------------------------- */
-#card-component {
-  position: absolute;
-  left: 25%;
-  top: 25%;
-  width: 51.05em;
-
-  .close {
-      position: absolute;
-      right: 0;
-      padding: 0px 8px;
-      color: #dddddd;
-      font-size: 28px;
-      font-weight: bold;
-      user-select: none;
-      z-index: 1;
-  }
-
-  .card-contents {
-      min-width: 50%;
-      max-width: 100%;
-      display: none;
-      position: absolute;
-      border: 2px solid #dddddd;
-  }
-  .card-open {
+  #map {
       display: block;
-      background-color: white;
-  }
-  .card-open > .close:hover,.close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-  }
-}
+      cursor: default;
+      text-align: center;
+      height: 90vh;
+      width: 100%;
 
-/*--------------------------*/
-/*|        slider          |*/
-/*--------------------------*/
-.slick-prev:before, .slick-next:before {
-    color: black;
-}
-/*--------------------------*/
-/*|        vector          |*/
-/*--------------------------*/
-#map .vector {
-    user-select: none;
+      .point {
+          position: relative;
+          cursor: pointer;
+          z-index: 0;
+      }
+
+      h1 {
+        font-family: "Abril Fatface";
+        position: absolute;
+        left: 50%;
+        margin-top: 70px;
+        transform: translateX(-50%);
+      }
+
+      p {
+          margin: 0;
+      }
+
+      polygon, path {
+        fill: #ECECEC;
+      }
+
+      path.city:hover, path.pointer:hover {
+        cursor: pointer;
+      }
+
+      path.city {
+        fill: black;
+      }
+
+      path.pointer {
+        fill: #068DC2;
+      }
+  }
+  /* -------------------------- */
+  /* |         card           | */
+  /* -------------------------- */
+  #card-component {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 51.05em;
+
+    .close {
+        position: absolute;
+        right: 0;
+        padding: 0px 8px;
+        color: #dddddd;
+        font-size: 28px;
+        font-weight: bold;
+        user-select: none;
+        z-index: 1;
+    }
+
+    .card-contents {
+        min-width: 50%;
+        max-width: 100%;
+        display: none;
+        position: absolute;
+        border: 2px solid #dddddd;
+    }
+    .card-open {
+        display: block;
+        background-color: white;
+    }
+    .card-open > .close:hover,.close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+  }
+
+  /*--------------------------*/
+  /*|        slider          |*/
+  /*--------------------------*/
+  .slick-prev:before, .slick-next:before {
+      color: black;
+  }
+  /*--------------------------*/
+  /*|        vector          |*/
+  /*--------------------------*/
+  #map .vector {
+      user-select: none;
+  }
+
 }

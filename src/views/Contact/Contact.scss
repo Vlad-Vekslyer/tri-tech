@@ -146,6 +146,26 @@ body {
   }
   #mapOne,
   #mapTwo {
+    align-content: center;
+
+  }
+
+  #contactTitle {
+    width: 100%;
+    text-align: center;
+    color: #068dc2;
+    font: 48px Roboto;
+    font-weight: bold;
+    line-height: 56px;
+  }
+  #contactDesc {
+    color: #59caef;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
     margin-bottom: 50px;
   }
 }
@@ -176,11 +196,55 @@ body {
   }
   #info1,
   #info2 {
+<<<<<<< HEAD:src/components/Contact/Contact.css
     width: 60%;
+=======
+    padding: 1px 67px 1px 20px;
+    height: 40px;
+    width: 400px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    border-color: #068dc2;
+  }
+
+  #message {
+    float: right;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    border-style: none;
+    margin-top: -190px;
+>>>>>>> master:src/views/Contact/Contact.scss
   }
 
   #messagetext {
+<<<<<<< HEAD:src/components/Contact/Contact.css
     width: 70%;
+=======
+    font-size: 17px;
+    padding: 12px 20px;
+    border-color: #068dc2;
+  }
+
+  #userlogo {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -40px;
+  }
+  #messagelogo {
+    position: absolute;
+    margin-left: -40px;
+    margin-top: 123px;
+  }
+  #messageArea {
+    float: right;
+    margin-right: 100px;
+    margin-top: -195px;
+>>>>>>> master:src/views/Contact/Contact.scss
   }
   #contactPersonal {
     font-size: 20px;
@@ -194,6 +258,7 @@ body {
   .flip-card-front,
   .flip-card-inner {
     width: 100%;
+<<<<<<< HEAD:src/components/Contact/Contact.css
     height: 100%;
   }
   .flip-card-inner {
@@ -204,3 +269,27 @@ body {
     align-items: right;
   }
 }
+=======
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .map1,
+  .map2,
+  .map3 {
+    width: 400px;
+    height: 400px;
+    frameborder: 0 style= "border:0;" allowfullscreen= "";
+  }
+
+  #copyright {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 100px;
+    color: #59caef;
+  }
+>>>>>>> master:src/views/Contact/Contact.scss
