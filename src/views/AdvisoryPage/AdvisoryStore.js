@@ -3,19 +3,14 @@ const txt = "Mr. Bagry is a seasoned finance professionaland entrepreneur with o
 //------------------------~
 
 const CardData = {
-    "chicago":        
-        [
-            {
-                card_id: 1,
-                name: "JAMES MURRAY",
-                location: 'Chicago',
-                text: "Mr. Murray is a Partner and Head of BusinessDevelopment at Centric Wealth Management inChicago. Previously at Merrill Lynch, Jim wasone of the founding employees at Centric andhas been instrumental in building the athletedivision at Centric which now includes over 25athletes in multiple sports. Jim played 4 yearsat St. Cloud State, a top Division 1 Men’s IceHockey Program."
-            }
-        ]
-
-    ,
-    
-    "la":[
+    "chicago":[
+        {
+            card_id: 1,
+            name: "JAMES MURRAY",
+            location: 'Chicago',
+            text: "Mr. Murray is a Partner and Head of BusinessDevelopment at Centric Wealth Management inChicago. Previously at Merrill Lynch, Jim wasone of the founding employees at Centric andhas been instrumental in building the athletedivision at Centric which now includes over 25athletes in multiple sports. Jim played 4 yearsat St. Cloud State, a top Division 1 Men’s IceHockey Program."
+        }
+    ],"la":[
         {
             card_id: 1,
             name: "ERIC JOHNSON",

@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import $ from "jquery";
+// import MediaQuery from 'react-responsive';
 
 import "../../../node_modules/slick-carousel/slick/slick.css"; 
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
@@ -56,17 +56,6 @@ const AdvisoryPage = () => {
         );
     });
 
-    //for centering Card with jquery------------
-    function alignCard(place){  //use locate when you resize
-        let id = `#${place}`
-        let content_width = $(id).outerWidth()/2;
-        let window_width = (window.innerWidth-17)/2;
-        let x = `${window_width-content_width}px`;
-        $('.card-component').css('left', x);
-        console.log("XXX: ", content_width, window_width+' ans: '+ x)
-    }
-    //------------------------------------------
-
     function mouseClickHandlar(place) {
         if(!isClicked || isClosed){
             console.log("clicked")
@@ -75,7 +64,6 @@ const AdvisoryPage = () => {
             isClicked = !isClicked
             isClosed = false;
         }
-        alignCard(place);
     }
     //code that you can close the Card only from this close button
     function closeClickHandlar(){
@@ -85,9 +73,12 @@ const AdvisoryPage = () => {
 
     return (
         <>
-        <div id="adviser" className="adviser" onResize={() => alignCard(locate)}>   
+        <div id="adviser" className="adviser">   
+            <div id="card-component" className="card-component">
+                {cities}
+            </div> 
+
             <div id="country">
-                
                 <img src={map}></img>
                 {/* mouseClickHandlar(props) <= should be properties*/}
                 <div className="vector vector1"><img className="point" onClick={() => mouseClickHandlar("chicago")} src={vector} ></img><p>Chicago</p></div>
@@ -98,11 +89,6 @@ const AdvisoryPage = () => {
                 <div className="vector vector6"><img className="point" onClick={() => mouseClickHandlar("mexico")} src={vector} ></img><p>Mexico City</p></div>
                 <div className="vector vector7"><img className="point" onClick={() => mouseClickHandlar("berlin")} src={vector} ></img><p>Berlin</p></div>
             </div>  
-            <div className="center">
-                <div id="card-component" className="card-component">
-                    {cities}
-                </div> 
-            </div>
             
         </div>
         </>

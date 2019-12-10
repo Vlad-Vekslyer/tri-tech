@@ -32,21 +32,25 @@
     z-index: 1;
 }
 .card-component {
-    position: absolute;
-    text-align: center;
-    width: 51.05em;
-    left: 30%;
-    /* left: calc(50vw - card-contents/2); */
-    top: 35%;
+    position: relative;
+    transform: translateY(15em);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
 }
 .card-contents {
-    min-width: 50%;
-    max-width: 100%;
+    display: block;
+    min-width: calc(51.05em/2);
+    max-width: 51.05em;
+    margin: 0 auto;
     visibility: hidden;
     opacity: 0;
     position: absolute;
     transition: .3s;
     border: 2px solid #dddddd;
+    z-index: 10;
 }
 .card-open {
     visibility: visible;
@@ -71,6 +75,7 @@
 /*--------------------------*/
 #country .vector {
     user-select: none;
+    z-index: 0;
 }
 #adviser .vector1{
     position: absolute;
