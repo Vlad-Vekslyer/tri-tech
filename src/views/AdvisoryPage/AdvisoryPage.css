@@ -22,14 +22,14 @@
 /* |         card           | */
 /* -------------------------- */
 .close {
-    position: sticky;
+    position: absolute;
     right: 0;
-    /* transform: translateX(26.5em); */
     padding: 0px 8px;
     color: #dddddd;
     font-size: 28px;
     font-weight: bold;
     user-select: none;
+    z-index: 1;
 }
 .card-component {
     position: absolute;
@@ -41,7 +41,7 @@
 .card-contents {
     min-width: 50%;
     max-width: 100%;
-    overflow-x: auto;
+    /* overflow: auto; */
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -59,6 +59,12 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+/*--------------------------*/
+/*|        slider          |*/
+/*--------------------------*/
+.slick-prev:before, .slick-next:before {
+    color: black;
 }
 /*--------------------------*/
 /*|        vector          |*/
