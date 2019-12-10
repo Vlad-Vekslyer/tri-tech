@@ -10,7 +10,6 @@ const Press = () => {
     const articles = require('./dummy-data.json').dummy;
     const defaultArticles = articles.slice(0, 3);
     const restOfArticles = articles.slice(3, articles.length);
-    const pressSection = useRef();
     const defaultArticlesDiv = useRef();
     const restOfArticlesDiv = useRef();
 
@@ -21,7 +20,7 @@ const Press = () => {
     }
 
     return (
-        <section id="press" className="container" ref={pressSection}>
+        <section id="press" className="container">
             <div className="cover"></div>
             <Header position="center">
                 Press
