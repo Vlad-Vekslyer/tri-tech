@@ -1,81 +1,74 @@
-/* -------------------------- */
-/* |      world map svg     | */
-/* -------------------------- */
-polygon, path {
-  fill: #ECECEC;
-}
-
-path.city:hover, path.pointer:hover {
-  cursor: pointer;
-}
-
-path.city {
-  fill: black;
-}
-
-path.pointer {
-  fill: #068DC2;
-}
-/* -------------------------- */
-/* |      pointer & img     | */
-/* -------------------------- */
-#country {
+#map {
     display: block;
     cursor: default;
     text-align: center;
     height: 90vh;
     width: 100%;
-}
-#country .point {
-    position: relative;
-    cursor: pointer;
-    z-index: 0;
-}
-#country p{
-    margin: 0;
+
+    .point {
+        position: relative;
+        cursor: pointer;
+        z-index: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    polygon, path {
+      fill: #ECECEC;
+    }
+
+    path.city:hover, path.pointer:hover {
+      cursor: pointer;
+    }
+
+    path.city {
+      fill: black;
+    }
+
+    path.pointer {
+      fill: #068DC2;
+    }
 }
 /* -------------------------- */
 /* |         card           | */
 /* -------------------------- */
-.close {
-    position: absolute;
-    right: 0;
-    padding: 0px 8px;
-    color: #dddddd;
-    font-size: 28px;
-    font-weight: bold;
-    user-select: none;
-    z-index: 1;
-}
-.card-component {
-    position: absolute;
-    left: 25%;
-    top: 25%;
-    width: 51.05em;
+#card-component {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  width: 51.05em;
 
+  .close {
+      position: absolute;
+      right: 0;
+      padding: 0px 8px;
+      color: #dddddd;
+      font-size: 28px;
+      font-weight: bold;
+      user-select: none;
+      z-index: 1;
+  }
+
+  .card-contents {
+      min-width: 50%;
+      max-width: 100%;
+      display: none;
+      position: absolute;
+      border: 2px solid #dddddd;
+  }
+  .card-open {
+      display: block;
+      background-color: white;
+  }
+  .card-open > .close:hover,.close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
 }
-.card-contents {
-    min-width: 50%;
-    max-width: 100%;
-    overflow-x: auto;
-    display: none;
-    opacity: 0;
-    position: absolute;
-    transition: .4s;
-    border: 2px solid #dddddd;
-}
-.card-open {
-    display: flex;
-    opacity: 1;
-    transition: .4s;
-    background-color: white;
-    z-index: 2;
-}
-.card-open > .close:hover,.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 /*--------------------------*/
 /*|        slider          |*/
 /*--------------------------*/
@@ -85,41 +78,6 @@ path.pointer {
 /*--------------------------*/
 /*|        vector          |*/
 /*--------------------------*/
-#country .vector {
+#map .vector {
     user-select: none;
-}
-#adviser .vector1{
-    position: absolute;
-    top: 22.5em;
-    left: 40.5em;
-}
-#adviser .vector2 {
-    position: absolute;
-    top: 24em;
-    left: 28em;
-}
-#adviser .vector3 {
-    position: absolute;
-    top: 28.5em;
-    left: 29.5em;
-}
-#adviser .vector4 {
-    position: absolute;
-    top: 26.5em;
-    left: 42em;
-}
-#adviser .vector5 {
-    position: absolute;
-    top: 28em;
-    left: 37em;
-}
-#adviser .vector6 {
-    position: absolute;
-    top: 31.5em;
-    left: 34.5em;
-}
-#adviser .vector7 {
-    position: absolute;
-    top: 23em;
-    left: 70em;
 }
