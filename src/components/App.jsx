@@ -1,10 +1,14 @@
 import React from "react";
 import "./App.scss";
-import AboutUs from "../views/AboutUs/AboutUs";
+
+import AdvisoryPage from "../views/AdvisoryPage/AdvisoryPage.jsx";
+import Navbar from "./Navbar/Navbar.jsx";
+
 function App() {
   return (
     <>
-      <AboutUs />
+      <Navbar />
+      <AdvisoryPage />
     </>
   );
 }
