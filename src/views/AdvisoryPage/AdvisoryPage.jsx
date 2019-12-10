@@ -11,17 +11,41 @@ const AdvisoryPage = () => {
     let locate;
     let isClicked = false;
     let isClosed = false;
-    // -----------------
+    // for Slider--------
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1
+    };
 
     // Object.map then Array.map
     //city is key for object, cards is an object
     let cities = Object.keys(CardData).map(city => {
-        let cards = CardData[city].map((card, index) => <><div><Card key={index} text={card.text} name={card.name} location={card.location}/></div></>);
+        let cards = CardData[city].map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
+
+    // to separate if cards has more than two contents-----------
+    let newCard=[], newCards=[];
+
+        cards.map(content => {
+            if(cards.length > 2){
+                newCards.push(content)
+            }else{
+                newCard.push(content)
+            }
+        })
+    // -----------
+
         return (
             <>
             <div id={city} className="card-contents">
-                {cards}
-                <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
+            <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
+                {newCard}
+                <Slider {...settings}>
+                    {newCards}
+                </Slider>
+
             </div>
             </>
         );
