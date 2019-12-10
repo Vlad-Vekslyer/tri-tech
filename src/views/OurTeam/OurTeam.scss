@@ -1,0 +1,55 @@
+.ourTeam-container {
+  min-height: 100vh;
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.ourTeam-content {
+  width: 1200px;
+  height: 357px;
+  font-size: 14px;
+  background: #fff;
+
+  display: flex;
+
+  margin: 15px auto;
+}
+
+.ourTeam-img {
+  height: 357px;
+  width: 416px;
+}
+
+.outTeam-content-section {
+  margin: 10px;
+}
+
+.ourTeam-title {
+  font-size: 48px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.ourTeam-name {
+  font-size: 36px;
+  margin: 10px;
+}
+.ourTeam-location {
+  font-size: 24px;
+}
+
+.ourTeam-paragraph {
+}
+
+.ourTeam-blue {
+  position: absolute;
+  background: blue;
+  height: 100%;
+  width: calc(8% + 420px);
+  z-index: 10;
+}
