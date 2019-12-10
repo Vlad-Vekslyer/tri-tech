@@ -18,7 +18,7 @@ function App() {
       <OurTeam/>
       <AdvisoryPage/>
       <Press/>
-      <Contact/>
+
     </>
   );
 }

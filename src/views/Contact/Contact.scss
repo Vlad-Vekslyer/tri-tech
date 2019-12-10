@@ -196,9 +196,7 @@ body {
   }
   #info1,
   #info2 {
-<<<<<<< HEAD:src/components/Contact/Contact.css
     width: 60%;
-=======
     padding: 1px 67px 1px 20px;
     height: 40px;
     width: 400px;
@@ -218,13 +216,10 @@ body {
     line-height: 28px;
     border-style: none;
     margin-top: -190px;
->>>>>>> master:src/views/Contact/Contact.scss
   }
 
   #messagetext {
-<<<<<<< HEAD:src/components/Contact/Contact.css
     width: 70%;
-=======
     font-size: 17px;
     padding: 12px 20px;
     border-color: #068dc2;
@@ -244,7 +239,6 @@ body {
     float: right;
     margin-right: 100px;
     margin-top: -195px;
->>>>>>> master:src/views/Contact/Contact.scss
   }
   #contactPersonal {
     font-size: 20px;
@@ -258,7 +252,6 @@ body {
   .flip-card-front,
   .flip-card-inner {
     width: 100%;
-<<<<<<< HEAD:src/components/Contact/Contact.css
     height: 100%;
   }
   .flip-card-inner {
@@ -267,13 +260,12 @@ body {
   }
   .maps {
     align-items: right;
-  }
-}
-=======
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
   }
+}
+
   .map1,
   .map2,
   .map3 {
@@ -292,4 +284,3 @@ body {
     margin-top: 100px;
     color: #59caef;
   }
->>>>>>> master:src/views/Contact/Contact.scss
