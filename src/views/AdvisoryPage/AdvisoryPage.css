@@ -33,25 +33,25 @@
 }
 .card-component {
     position: absolute;
-    left: 25%;
-    top: 25%;
+    text-align: center;
     width: 51.05em;
-    
+    left: 30%;
+    /* left: calc(50vw - card-contents/2); */
+    top: 35%;
 }
 .card-contents {
     min-width: 50%;
     max-width: 100%;
-    /* overflow: auto; */
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    transition: .4s;
+    transition: .3s;
     border: 2px solid #dddddd;
 }
 .card-open {
     visibility: visible;
     opacity: 1;
-    transition: .4s;
+    transition: .3s;
     background-color: white;
     z-index: 2;
 }

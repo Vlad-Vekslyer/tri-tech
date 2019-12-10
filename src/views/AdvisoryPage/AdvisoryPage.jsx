@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 import Slider from "react-slick";
-
+import $ from "jquery";
 
 import "../../../node_modules/slick-carousel/slick/slick.css"; 
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
@@ -12,11 +12,12 @@ import vector from "../../assets/Vector.png"
 import map from "../../assets/worldmap.svg"
 
 const AdvisoryPage = () => {
-    //for test code---
-    let locate;
-    let isClicked = false;
+    //for Handlar code-------
+    let locate;             //to store previous id of Card
+    let isClicked = false;  //to prevent breaking code when you open and close the Card
     let isClosed = false;
-    // for Slider--------
+    
+    // for Slider --------
     const settings = {
         dots: false,
         infinite: true,
@@ -30,7 +31,7 @@ const AdvisoryPage = () => {
     let cities = Object.keys(CardData).map(city => {
         let cards = CardData[city].map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
 
-    // to separate if cards has more than two contents-----------
+    // to separate if cards has more than two contents
     let newCard=[], newCards=[];
 
         cards.map(content => {
@@ -45,16 +46,26 @@ const AdvisoryPage = () => {
         return (
             <>
             <div id={city} className="card-contents">
-            <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
+                <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
                 {newCard}
                 <Slider {...settings}>
                     {newCards}
                 </Slider>
-                
             </div>
             </>
         );
     });
+
+    //for centering Card with jquery------------
+    function alignCard(place){  //use locate when you resize
+        let id = `#${place}`
+        let content_width = $(id).outerWidth()/2;
+        let window_width = (window.innerWidth-17)/2;
+        let x = `${window_width-content_width}px`;
+        $('.card-component').css('left', x);
+        console.log("XXX: ", content_width, window_width+' ans: '+ x)
+    }
+    //------------------------------------------
 
     function mouseClickHandlar(place) {
         if(!isClicked || isClosed){
@@ -64,8 +75,9 @@ const AdvisoryPage = () => {
             isClicked = !isClicked
             isClosed = false;
         }
+        alignCard(place);
     }
-    //code that you can close Card only from close button
+    //code that you can close the Card only from this close button
     function closeClickHandlar(){
         isClosed = !isClosed;
         mouseClickHandlar(locate)
@@ -73,7 +85,7 @@ const AdvisoryPage = () => {
 
     return (
         <>
-        <div id="adviser" className="adviser">   
+        <div id="adviser" className="adviser" onResize={() => alignCard(locate)}>   
             <div id="country">
                 
                 <img src={map}></img>
@@ -86,9 +98,11 @@ const AdvisoryPage = () => {
                 <div className="vector vector6"><img className="point" onClick={() => mouseClickHandlar("mexico")} src={vector} ></img><p>Mexico City</p></div>
                 <div className="vector vector7"><img className="point" onClick={() => mouseClickHandlar("berlin")} src={vector} ></img><p>Berlin</p></div>
             </div>  
-            <div id="card-component" className="card-component">
-                {cities}
-            </div> 
+            <div className="center">
+                <div id="card-component" className="card-component">
+                    {cities}
+                </div> 
+            </div>
             
         </div>
         </>
