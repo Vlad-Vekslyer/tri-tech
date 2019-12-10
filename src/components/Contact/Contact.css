@@ -1,168 +1,201 @@
-body {
-    margin: 0;
-    padding: 0;
-  }
-  .App {
-    font-family: sans-serif;
-    text-align: center;
-  }.contactArea {
-    padding-top: 20px;
-    display: flex;
+.containerContact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#contactTitle {
+  width: 100%;
+  text-align: center;
+  color: #068dc2;
+  font: 48px Roboto;
+  font-weight: bold;
+  line-height: 56px;
+  margin-block-end: auto;
+}
+#contactDesc {
+  color: #59caef;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 60px;
+}
+#contactPersonal {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.formArea {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 30px;
+}
+#name,
+#email,
+#messages {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #068dc2;
+  margin-left: -460px;
+}
+#messages {
+  margin-left: -560px;
+}
+
+#info1,
+#info2 {
+  padding: 1px 67px 1px 20px;
+  height: 48px;
+  width: 424px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  border-color: #068dc2;
+}
+
+#message {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  border-style: none;
+}
+#messagetext {
+  width: 609px;
+  height: 163px;
+  font-size: 17px;
+  padding: 12px 20px;
+  border-color: #068dc2;
+}
+#submit {
+  color: white;
+  margin-bottom: 50px;
+  height: 68px;
+  width: 406px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #068dc2;
+}
+
+.containerMaps {
+  background-color: #005484;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.maps {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.map1,
+.map2,
+.map3 {
+  width: 400px;
+  height: 400px;
+  frameborder: 0 style= "border:0;" allowfullscreen= "";
+}
+
+#copyright {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #59caef;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .formArea {
     flex-direction: column;
-    align-content: center;
   }
-  .container {
-    width: 90%;
-    margin-left: 8%;
+  #messagetext {
+    width: 464px;
   }
-  
-  #contactTitle {
-    width: 100%;
-    text-align: center;
-    color: #068dc2;
-    font: 48px Roboto;
-    font-weight: bold;
-    line-height: 56px;
+  #messages {
+    margin-left: -420px;
   }
-  #contactDesc {
-    color: #59caef;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-  
+  .maps {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 300px;
+  }
+  #mapOne,
+  #mapTwo {
     margin-bottom: 50px;
   }
-  #contactPersonal {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 1000;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .maps {
+    padding-left: 0px;
+    align-items: center;
   }
-  #formpart {
-    margin-top: 100px;
+}
+
+@media screen and (max-width: 426px) {
+  .formArea {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #contactTitle {
+    font-size: 45px;
   }
   #name,
-  #email,
+  #email {
+    margin-left: 0px;
+    margin-right: 65%;
+  }
   #messages {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    color: #068dc2;
+    margin-left: 0px;
+    margin-right: 60%;
   }
   #info1,
   #info2 {
-    padding: 1px 67px 1px 20px;
-    height: 40px;
-    width: 400px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    border-color: #068dc2;
+    width: 60%;
   }
-  
-  #message {
-    float: right;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    border-style: none;
-    margin-top: -190px;
-  }
+
   #messagetext {
-    font-size: 17px;
-    padding: 12px 20px;
-    border-color: #068dc2;
+    width: 70%;
   }
-  
-  #userlogo {
-    position: absolute;
-    margin-top: 5px;
-    margin-left: -40px;
+  #contactPersonal {
+    font-size: 20px;
   }
-  #messagelogo {
-    position: absolute;
-    margin-left: -40px;
-    margin-top: 123px;
-  }
-  #messageArea {
-    float: right;
-    margin-right: 100px;
-    margin-top: -195px;
-  }
+
   #submit {
-    color: white;
-    float: right;
-    margin-right: -200px;
-    margin-top: 50px;
-    height: 68px;
-    width: 406px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #068dc2;
+    width: 80%;
   }
-  #submit:hover {
-    cursor: pointer;
-  }
-  #thanks,
-  #error {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 37px;
-  }
-  #offices {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 37px;
-    clear: both;
-    margin-top: 250px;
-  }
-  .containerMaps {
-    width: 90%;
-    background-color: #005484;
-    margin-top: 80px;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  .App {
+  .flip-card,
+  .flip-card-back,
+  .flip-card-front,
+  .flip-card-inner {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    height: 100%;
   }
-  .map1,
-  .map2,
-  .map3 {
-    width: 400px;
-    height: 400px;
-    frameborder: 0 style= "border:0;" allowfullscreen= "";
+  .flip-card-inner {
+    box-shadow: none;
+    margin-right: 0px;
   }
-  
-  #copyright {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    margin-top: 100px;
-    color: #59caef;
+  .maps {
+    align-items: right;
   }
+}
