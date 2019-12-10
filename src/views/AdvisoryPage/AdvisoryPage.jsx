@@ -61,7 +61,7 @@ const AdvisoryPage = () => {
     }
 
     return (
-        <>
+        <section id="advisory-network">
           <div id="map">
               <h1>Advisory Network</h1>
               {/* mouseClickHandlar(props) <= should be properties*/}
@@ -97,7 +97,7 @@ const AdvisoryPage = () => {
           <div id="card-component" className="card-component">
               {cities}
           </div>
-        </>
+        </section>
     )
 }
 
