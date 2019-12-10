@@ -1,6 +1,6 @@
 import React  from "react";
 import PropTypes from "prop-types";
-import "./Card.css";
+import "./Card.scss";
 
 const Card = (props) => {
     return (
@@ -9,11 +9,11 @@ const Card = (props) => {
                 <div className="img">
                     {props.imageUrl && <img src={props.imageUrl} alt="person-face_img" />}
                 </div>
-                <span> 
+                <span>
                     {props.name}, {props.location}
-                    <p>{props.text}</p>    
+                    <p>{props.text}</p>
                 </span>
-                
+
             </div>
         </>
     )
