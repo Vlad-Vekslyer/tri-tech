@@ -7,7 +7,7 @@ function Navbar(){
   let [isDrop, setDrop] = useState(false);
   return(
     <nav>
-      <div className="container">
+      <div className="nav-container">
         <ul className="top">
           <li className="start">
             <Icon/>

@@ -61,8 +61,9 @@ const AdvisoryPage = () => {
     }
 
     return (
-        <>
+        <section id="advisory-network">
           <div id="map">
+              <h1>Advisory Network</h1>
               {/* mouseClickHandlar(props) <= should be properties*/}
               <WorldMap>
                 <svg onClick={() => mouseClickHandlar("van")} x="205" y="410" width="100" height="75" viewBox="0 0 77 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +97,7 @@ const AdvisoryPage = () => {
           <div id="card-component" className="card-component">
               {cities}
           </div>
-        </>
+        </section>
     )
 }
 

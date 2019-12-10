@@ -1,12 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Flipping from "./Flipping";
+import Flipping from "../../components/Flipping/Flipping.jsx";
 import Myform from "./myForm";
 
-import "./styles.css";
+import "./Contact.scss";
 import { checkPropTypes } from "prop-types";
 
-function App() {
+function Contact() {
   return (
     <>
       <div className="contactArea">
@@ -93,5 +92,4 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+export default Contact;

@@ -1,7 +1,5 @@
 import React from "react";
-import "./styles.css";
-import Message from "./pictures/message.png";
-import User from "./pictures/user.png";
+import "./style.css";
 
 export default class MyForm extends React.Component {
   constructor(props) {
@@ -23,8 +21,6 @@ export default class MyForm extends React.Component {
         <div className="formarea">
           <p id="name">Name:</p>
           <input type="text" name="name" id="info1" required />
-          <img src={Message} id="messagelogo" alt="message" />
-          <img src={User} id="userlogo" alt="user" />
           <p id="email">Email:</p>
           <input type="email" name="email" id="info2" required />
           <div id="messageArea">
