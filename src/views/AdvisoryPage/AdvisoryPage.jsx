@@ -1,9 +1,6 @@
 import React, {useState} from "react";
 import Slider from "react-slick";
 
-
-import "../../../node_modules/slick-carousel/slick/slick.css"; 
-import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import "./AdvisoryPage.css";
 
 import Card from "../../components/Card/Card.jsx"
@@ -38,8 +35,8 @@ const AdvisoryPage = () => {
                 newCards.push(content)
             }else{
                 newCard.push(content)
-            }    
-        }) 
+            }
+        })
     // -----------
 
         return (
@@ -50,7 +47,7 @@ const AdvisoryPage = () => {
                 <Slider {...settings}>
                     {newCards}
                 </Slider>
-                
+
             </div>
             </>
         );
@@ -73,9 +70,9 @@ const AdvisoryPage = () => {
 
     return (
         <>
-        <div id="adviser" className="adviser">   
+        <div id="adviser" className="adviser">
             <div id="country">
-                
+
                 <img src={map}></img>
                 {/* mouseClickHandlar(props) <= should be properties*/}
                 <div className="vector vector1"><img className="point" onClick={() => mouseClickHandlar("chicago")} src={vector} ></img><p>Chicago</p></div>
@@ -85,11 +82,11 @@ const AdvisoryPage = () => {
                 <div className="vector vector5"><img className="point" onClick={() => mouseClickHandlar("dallas")} src={vector} ></img><p>Dallas</p></div>
                 <div className="vector vector6"><img className="point" onClick={() => mouseClickHandlar("mexico")} src={vector} ></img><p>Mexico City</p></div>
                 <div className="vector vector7"><img className="point" onClick={() => mouseClickHandlar("berlin")} src={vector} ></img><p>Berlin</p></div>
-            </div>  
+            </div>
             <div id="card-component" className="card-component">
                 {cities}
-            </div> 
-            
+            </div>
+
         </div>
         </>
     )
