@@ -6,6 +6,7 @@ import Navbar from "./Navbar/Navbar.jsx";
 import Landing from "../views/Landing/Landing.jsx";
 import AboutUs from "../views/AboutUs/AboutUs.jsx";
 import Press from "../views/Press/Press.jsx";
+import Contact from "../views/Contact/Contact.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <AboutUs/>
       <AdvisoryPage/>
       <Press/>
+      <Contact/>
     </>
   );
 }
