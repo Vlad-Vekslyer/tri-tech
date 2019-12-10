@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutUs.scss";
-import img from "../../assets/AboutUs-image.jpeg";
+import img from "../../assets/AboutUs-img.png";
+
 const paragraphs = [
   "We take an active role as advisors and/or board members in companies we invest in",
   "- We help these companies with business development, partnerships and strategy",
@@ -11,22 +12,20 @@ const paragraphs = [
 
 const AboutUs = () => {
   return (
-    <section style={{backgroundColor:"#32373C"}}>
-      <div className="aboutus-container">
-        <div>
-          <img src={img} alt="" />
-        </div>
-        <div>
-          <h2 className="aboutus-title">About Us</h2>
+    <section className="aboutus-container">
+      <div>
+        <img className="aboutus-img" src={img} alt="" />
+      </div>
+      <div>
+        <h2 className="aboutus-title">About Us</h2>
 
-          {paragraphs.map((paragraph, index) => {
-            return (
-              <p key={index} className="aboutus-paragraph">
-                {paragraph}
-              </p>
-            );
-          })}
-        </div>
+        {paragraphs.map((paragraph, index) => {
+          return (
+            <p key={index} className="aboutus-paragraph">
+              {paragraph}
+            </p>
+          );
+        })}
       </div>
     </section>
   );
