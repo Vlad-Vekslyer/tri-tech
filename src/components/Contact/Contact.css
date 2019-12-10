@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 body{
   margin: 0;
   padding: 0;
 }
+=======
+>>>>>>> master
 .containerContact {
   display: flex;
   flex-direction: column;
@@ -161,7 +164,7 @@ body{
     padding-left: 0px;
     padding-right: 0px;
   }
-  #contactTitle{
+  #contactTitle {
     font-size: 45px;
   }
   #name,
