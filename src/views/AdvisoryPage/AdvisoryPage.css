@@ -1,14 +1,29 @@
 /* -------------------------- */
+/* |      world map svg     | */
+/* -------------------------- */
+polygon, path {
+  fill: #ECECEC;
+}
+
+path.city:hover, path.pointer:hover {
+  cursor: pointer;
+}
+
+path.city {
+  fill: black;
+}
+
+path.pointer {
+  fill: #068DC2;
+}
+/* -------------------------- */
 /* |      pointer & img     | */
 /* -------------------------- */
-#adviser {
-    /* width: 100%; */
-    height: 100%;
-}
 #country {
     display: block;
     cursor: default;
     text-align: center;
+    height: auto;
 }
 #country .point {
     position: relative;
@@ -36,20 +51,20 @@
     left: 25%;
     top: 25%;
     width: 51.05em;
-    
+
 }
 .card-contents {
     min-width: 50%;
     max-width: 100%;
     overflow-x: auto;
-    visibility: hidden;
+    display: none;
     opacity: 0;
     position: absolute;
     transition: .4s;
     border: 2px solid #dddddd;
 }
 .card-open {
-    visibility: visible;
+    display: flex;
     opacity: 1;
     transition: .4s;
     background-color: white;

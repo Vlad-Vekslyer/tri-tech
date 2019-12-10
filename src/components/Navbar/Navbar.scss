@@ -1,7 +1,12 @@
-@import '../../GlobalSass/mixin.scss';
+@import '../../styles/_breakpoints.scss';
 
 nav {
   background-color: white;
+
+  svg {
+    width: 270px;
+    height: 100px;
+  }
 
   button {
     border: none;

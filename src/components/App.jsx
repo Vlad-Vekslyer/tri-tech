@@ -7,8 +7,8 @@ import Navbar from "./Navbar/Navbar.jsx";
 function App() {
   return (
     <>
-      <AdvisoryPage />
       <Navbar/>
+      <AdvisoryPage />
     </>
   );
 }

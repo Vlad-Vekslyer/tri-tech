@@ -3,7 +3,7 @@ const txt = "Mr. Bagry is a seasoned finance professionaland entrepreneur with o
 //------------------------~
 
 const CardData = {
-    "chicago":        
+    "chicago":
         [
             {
                 card_id: 1,
@@ -22,7 +22,7 @@ const CardData = {
             //     name: "jin",
             //     location: 'Chicago',
             //     text: 'some information here..'
-            // }   
+            // }
         ]
 
     ,
@@ -164,7 +164,5 @@ const CardData = {
         }
     ]
 }
-
-
 
 export default CardData;
