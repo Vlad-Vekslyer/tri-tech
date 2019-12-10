@@ -1,7 +1,9 @@
-@import '../../GlobalSass/mixin.scss';
+@import '../../styles/_breakpoints.scss';
 
 nav {
   background-color: white;
+  position: fixed;
+  width: 100%;
 
   button {
     border: none;
@@ -43,6 +45,10 @@ nav {
 
   li.end li {
     padding: 5px 20px;
+  }
+
+  li.end {
+    right: 0;
   }
 
   li.hamburger, ul.dropdown {

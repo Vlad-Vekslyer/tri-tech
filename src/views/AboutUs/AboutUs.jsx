@@ -11,7 +11,7 @@ const paragraphs = [
 
 const AboutUs = () => {
   return (
-    <>
+    <section style={{backgroundColor:"#32373C"}}>
       <div className="aboutus-container">
         <div>
           <img src={img} alt="" />
@@ -28,7 +28,7 @@ const AboutUs = () => {
           })}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
