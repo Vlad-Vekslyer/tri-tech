@@ -1,5 +1,9 @@
 import React, {useState} from "react";
 import Slider from "react-slick";
+
+
+import "../../../node_modules/slick-carousel/slick/slick.css"; 
+import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import "./AdvisoryPage.css";
 
 import Card from "../../components/Card/Card.jsx"
@@ -12,17 +16,41 @@ const AdvisoryPage = () => {
     let locate;
     let isClicked = false;
     let isClosed = false;
-    // -----------------
+    // for Slider--------
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1
+    };
 
     // Object.map then Array.map
     //city is key for object, cards is an object
     let cities = Object.keys(CardData).map(city => {
-        let cards = CardData[city].map((card, index) => <><div><Card key={index} text={card.text} name={card.name} location={card.location}/></div></>);
+        let cards = CardData[city].map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
+
+    // to separate if cards has more than two contents-----------
+    let newCard=[], newCards=[];
+
+        cards.map(content => {
+            if(cards.length > 2){
+                newCards.push(content)
+            }else{
+                newCard.push(content)
+            }    
+        }) 
+    // -----------
+
         return (
             <>
             <div id={city} className="card-contents">
-                {cards}
-                <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
+            <span className="close" onClick={() => closeClickHandlar()}>&times;</span>
+                {newCard}
+                <Slider {...settings}>
+                    {newCards}
+                </Slider>
+                
             </div>
             </>
         );
@@ -47,8 +75,9 @@ const AdvisoryPage = () => {
         <>
         <div id="adviser" className="adviser">   
             <div id="country">
-                {/* mouseClickHandlar(props) <= should be properties*/}
+                
                 <img src={map}></img>
+                {/* mouseClickHandlar(props) <= should be properties*/}
                 <div className="vector vector1"><img className="point" onClick={() => mouseClickHandlar("chicago")} src={vector} ></img><p>Chicago</p></div>
                 <div className="vector vector2"><img className="point" onClick={() => mouseClickHandlar("van")} src={vector} ></img><p>Vancouver</p></div>
                 <div className="vector vector3"><img className="point" onClick={() => mouseClickHandlar("la")} src={vector} ></img><p>Los Angels</p></div>
