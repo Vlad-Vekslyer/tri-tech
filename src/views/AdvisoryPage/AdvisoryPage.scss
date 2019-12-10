@@ -1,9 +1,17 @@
+@import '../../styles/breakpoints';
+
 #map {
-    display: block;
+    display: none;
     cursor: default;
     text-align: center;
     height: 90vh;
     width: 100%;
+    
+
+    //if bigger than sm size
+    @include break(md) {
+      display: block;
+    }
 
     .point {
         position: relative;
@@ -35,10 +43,12 @@
 /* |         card           | */
 /* -------------------------- */
 #card-component {
-  position: absolute;
-  left: 25%;
-  top: 25%;
-  width: 51.05em;
+  position: relative;
+  transform: translateY(15em);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
 
   .close {
       position: absolute;
@@ -52,8 +62,9 @@
   }
 
   .card-contents {
-      min-width: 50%;
-      max-width: 100%;
+      min-width: calc(49em/2);
+      max-width: 49em;
+      min-height: 160px;
       display: none;
       position: absolute;
       border: 2px solid #dddddd;
@@ -74,7 +85,17 @@
 /*--------------------------*/
 .slick-prev:before, .slick-next:before {
     color: black;
+
+    @include break(md) {
+      display: none;
+    }
+
+    @include break(mdlg) {
+      display: block;
+    }
 }
+
+
 /*--------------------------*/
 /*|        vector          |*/
 /*--------------------------*/
