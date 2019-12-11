@@ -25,6 +25,9 @@ const AdvisoryPage = () => {
         slidesToScroll: 1
     };
 
+    //for drop down----
+    let idx = 'la';
+
     // Object.map then Array.map
     //city is key for object, cards is an object
     let cities = Object.keys(CardData).map(city => {
@@ -65,6 +68,14 @@ const AdvisoryPage = () => {
         mouseClickHandlar(locate)
     }
 
+    //code for drop down
+    let selectCard = CardData[idx].map(obj => {
+        return(
+          <div><Card text={obj.text} name={obj.name} location={obj.location}/></div>
+          
+        )
+      });
+
     return (
         <>
           <div id="map">
@@ -100,7 +111,22 @@ const AdvisoryPage = () => {
                 </svg>
               </WorldMap>
 
+          </div>    
+          <div id="drop-down" className="drop-down">
+                <form name="myForm" action="">
+                    <select name="country" id="country" onChange="">
+                        <option value="chicago">Chicago</option>
+                        <option value="van" selected>Vancouver</option> 
+                        <option value="la">LA</option>
+                        <option value="nyc">NYC</option>
+                        <option value="dallas">Dallas</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="berlin">Berlin</option>
+                    </select>
+                </form>
+                {selectCard}
           </div>
+
         </>
     )
 }
