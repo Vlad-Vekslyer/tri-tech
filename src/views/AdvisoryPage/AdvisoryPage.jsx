@@ -26,7 +26,7 @@ const AdvisoryPage = () => {
     };
 
     //for drop down----
-    let idx = 'la';
+    let preValue = '';
 
     // Object.map then Array.map
     //city is key for object, cards is an object
@@ -68,13 +68,29 @@ const AdvisoryPage = () => {
         mouseClickHandlar(locate)
     }
 
-    //code for drop down
-    let selectCard = CardData[idx].map(obj => {
+    //code for drop down--------------
+    let selectCard = Object.keys(CardData).map(captal => {
+        let sctCards = CardData[captal].map((card, index) =><><div className="dropCard"><Card key={index*10} text={card.text} name={card.name} location={card.location}/></div></>)
+
         return(
-          <div><Card text={obj.text} name={obj.name} location={obj.location}/></div>
-          
+          <div id={`id-${captal}`} className="select-contents">
+            {sctCards}
+          </div>
         )
-      });
+    });
+
+    function selectChange() {
+      let e = document.getElementById('country')
+      let selectValue = e.options[e.selectedIndex].value;
+      
+      if(preValue){
+        document.getElementById(preValue).classList.toggle('selected')
+      }
+
+      document.getElementById(selectValue).classList.toggle('selected') 
+      preValue = selectValue;    //to save previous value
+      console.log("check: ", e, selectValue)  
+    }
 
     return (
         <>
@@ -112,16 +128,17 @@ const AdvisoryPage = () => {
               </WorldMap>
 
           </div>    
+
           <div id="drop-down" className="drop-down">
                 <form name="myForm" action="">
-                    <select name="country" id="country" onChange="">
-                        <option value="chicago">Chicago</option>
-                        <option value="van" selected>Vancouver</option> 
-                        <option value="la">LA</option>
-                        <option value="nyc">NYC</option>
-                        <option value="dallas">Dallas</option>
-                        <option value="mexico">Mexico</option>
-                        <option value="berlin">Berlin</option>
+                    <select name="country" id="country" onChange={() => selectChange()}>
+                        <option value="id-van" selected>Vancouver</option> 
+                        <option value="id-chicago">Chicago</option>
+                        <option value="id-la">LA</option>
+                        <option value="id-nyc">NYC</option>
+                        <option value="id-dallas">Dallas</option>
+                        <option value="id-mexico">Mexico</option>
+                        <option value="id-berlin">Berlin</option>
                     </select>
                 </form>
                 {selectCard}
