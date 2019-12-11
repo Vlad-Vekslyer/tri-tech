@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import '../../styles/breakpoints';
 
 #map {
@@ -12,74 +13,94 @@
     @include break(md) {
       display: block;
     }
-
-    .point {
-        position: relative;
-        cursor: pointer;
-        z-index: 0;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    polygon, path {
-      fill: #ECECEC;
-    }
-
-    path.city:hover, path.pointer:hover {
-      cursor: pointer;
-    }
-
-    path.city {
-      fill: black;
-    }
-
-    path.pointer {
-      fill: #068DC2;
-    }
-}
-/* -------------------------- */
-/* |         card           | */
-/* -------------------------- */
-#card-component {
+=======
+section#advisory-network {
   position: relative;
-  transform: translateY(15em);
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: flex-start;
+>>>>>>> master
 
-  .close {
-      position: absolute;
-      right: 0;
-      padding: 0px 8px;
-      color: #dddddd;
-      font-size: 28px;
-      font-weight: bold;
-      user-select: none;
-      z-index: 1;
+  #map {
+      display: block;
+      cursor: default;
+      text-align: center;
+      height: 90vh;
+      width: 100%;
+
+      .point {
+          position: relative;
+          cursor: pointer;
+          z-index: 0;
+      }
+
+      h1 {
+        font-family: "Abril Fatface";
+        font-weight: normal;
+        font-size: 3em;
+        position: absolute;
+        left: 50%;
+        margin-top: 70px;
+        transform: translateX(-50%);
+      }
+
+      p {
+          margin: 0;
+      }
+
+      polygon, path {
+        fill: #ECECEC;
+      }
+
+      path.city:hover, path.pointer:hover {
+        cursor: pointer;
+      }
+
+      path.city {
+        fill: black;
+      }
+
+      path.pointer {
+        fill: #068DC2;
+      }
   }
+  /* -------------------------- */
+  /* |         card           | */
+  /* -------------------------- */
+  #card-component {
+    position: relative;
+    transform: translateY(15em);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
 
-  .card-contents {
+    .close {
+        position: absolute;
+        right: 0;
+        padding: 0px 8px;
+        color: #dddddd;
+        font-size: 28px;
+        font-weight: bold;
+        user-select: none;
+        z-index: 1;
+    }
+
+    .card-contents {
       min-width: calc(49em/2);
       max-width: 49em;
       min-height: 160px;
       display: none;
       position: absolute;
       border: 2px solid #dddddd;
-  }
-  .card-open {
-      display: block;
-      background-color: white;
-  }
-  .card-open > .close:hover,.close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-  }
+    }
+    .card-open {
+        display: block;
+        background-color: white;
+    }
+    .card-open > .close:hover,.close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
-
 /*--------------------------*/
 /*|        slider          |*/
 /*--------------------------*/

@@ -1,0 +1,140 @@
+#contactTitle {
+    width: 100%;
+    text-align: center;
+    color: #068dc2;
+    font: 48px Roboto;
+    font-weight: bold;
+    line-height: 56px;
+    margin-block-end: auto;
+  }
+  #contactDesc {
+    color: #59caef;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 60px;
+  }
+  #contactPersonal {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .formArea {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 30px;
+  }
+  #name,
+  #email,
+  #messages {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #068dc2;
+    margin-left: -460px;
+  }
+  #messages {
+    margin-left: -560px;
+  }
+
+  #info1,
+  #info2 {
+    padding: 1px 0 1px 0;
+    height: 48px;
+    width: 424px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    border-color: #068dc2;
+  }
+
+  #message {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    border-style: none;
+  }
+  #messagetext {
+    width: 609px;
+    height: 163px;
+    font-size: 17px;
+    padding: 12px 20px;
+    border-color: #068dc2;
+  }
+  #submit {
+    color: white;
+    margin-bottom: 50px;
+    height: 68px;
+    width: 406px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #068dc2;
+  }
+
+  .containerMaps {
+    background-color: #005484;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+
+  .maps {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .map1,
+  .map2,
+  .map3 {
+    width: 400px;
+    height: 400px;
+    frameborder: 0 style= "border:0;" allowfullscreen= "";
+  }
+
+  #copyright {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #59caef;
+    margin-top: 100px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .formArea {
+      flex-direction: column;
+    }
+    #messagetext {
+      width: 464px;
+    }
+    #messages {
+      margin-left: -420px;
+    }
+    .maps {
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 300px;
+    }
+    #mapOne,
+    #mapTwo {
+      margin-bottom: 50px;
+    }
+  }

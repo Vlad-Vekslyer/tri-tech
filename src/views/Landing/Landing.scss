@@ -21,6 +21,13 @@ section#text {
 
   button {
     width: 160px;
+    border: none;
+    padding: 17px 0;
+    font-size: 1.2em;
+    background-color: #3898EC;
+    color: white;
+    cursor: pointer;
+    font-family: Roboto;
   }
 
   @include break(xs, true){

@@ -93,7 +93,7 @@ const AdvisoryPage = () => {
     }
 
     return (
-        <>
+        <section id="advisory-network">
           <div id="map">
             <div id="card-component" className="card-component">
                 {cities}
@@ -143,8 +143,8 @@ const AdvisoryPage = () => {
                 </form>
                 {selectCard}
           </div>
+        </section>
 
-        </>
     )
 }
 

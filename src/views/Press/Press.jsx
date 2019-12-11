@@ -10,23 +10,17 @@ const Press = () => {
     const articles = require('./dummy-data.json').dummy;
     const defaultArticles = articles.slice(0, 3);
     const restOfArticles = articles.slice(3, articles.length);
-    const pressSection = useRef();
-    const defaultArticlesDiv = useRef();
     const restOfArticlesDiv = useRef();
 
     const maxHeight = isOpen ? restOfArticlesDiv.current.scrollHeight + "px" : "0";
 
-    const handleClickToggler = () => {
-        setIsOpen(!isOpen);
-    }
-
     return (
-        <section id="press" className="container" ref={pressSection}>
+        <section id="press" className="container">
             <div className="cover"></div>
             <Header position="center">
                 Press
             </Header>
-            <div ref={defaultArticlesDiv} className="grid-container initial">
+            <div className="grid-container initial">
                 {
                     defaultArticles.map((articles) => {
                         return (
@@ -45,7 +39,7 @@ const Press = () => {
                         })
                     }
                 </div>
-                <ArticlesToggler isOpen={isOpen} handleClickToggler={handleClickToggler} />
+                <ArticlesToggler isOpen={isOpen} handleClickToggler={() => setIsOpen(!isOpen)} />
             </div>
         </section>
     );
