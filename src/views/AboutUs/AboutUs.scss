@@ -18,9 +18,9 @@
 .aboutus-title {
   font-size: 40px;
   line-height: 50px;
-
+  font-family: "Abril Fatface";
   margin: 40px auto;
-
+  font-weight: normal;
   width: 300px;
 
   @include break(sm) {
