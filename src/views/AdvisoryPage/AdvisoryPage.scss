@@ -1,29 +1,18 @@
-<<<<<<< HEAD
 @import '../../styles/breakpoints';
-
-#map {
-    display: none;
-    cursor: default;
-    text-align: center;
-    height: 90vh;
-    width: 100%;
     
-
-    //if bigger than sm size
-    @include break(md) {
-      display: block;
-    }
-=======
 section#advisory-network {
   position: relative;
->>>>>>> master
 
   #map {
-      display: block;
+      display: none;
       cursor: default;
       text-align: center;
       height: 90vh;
       width: 100%;
+
+      @include break(md) {
+        display: block;
+      }
 
       .point {
           position: relative;
@@ -151,5 +140,6 @@ section#advisory-network {
     border: 1px solid black;
   }
 
+}
 }
 
