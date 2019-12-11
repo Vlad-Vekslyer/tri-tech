@@ -31,9 +31,7 @@
 
   @include break(lg) {
     font-size: 48px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 180px;
+    margin: 0 auto;
     width: 500px;
   }
 }
@@ -76,21 +74,15 @@
   margin-left: auto;
 
   @include break(sm) {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 100px;
+
   }
 
   @include break(md) {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 150px;
     width: 600px;
     height: 400px;
   }
 
   @include break(lg) {
-    margin-top: 200px;
     margin-right: 100px;
     width: 497px;
     height: 319px;
