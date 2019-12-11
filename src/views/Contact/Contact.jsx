@@ -8,25 +8,21 @@ import { checkPropTypes } from "prop-types";
 function Contact() {
   return (
     <>
-      <div className="contactArea">
-        <div className="container">
-          <p id="contactTitle">Contact Brickhouse</p>
-          <p id="contactDesc">Ask us anything! We are here for you</p>
-          <h2 id="contactPersonal">
-            Matt Hoffar | 604.616.1514 | MATT@BRICKHOUSE.VENTURES
-          </h2>
-          <h2 id="contactPersonal">
-            Spencer Smyl | 604.785.4229 | SPENCER@BRICKHOUSE.VENTURES
-          </h2>
-
-          <div id="formpart">
-            <Myform />
-          </div>
-        </div>
-        <div className="containerMaps">
-          <div className="App">
+      <div className="containerContact">
+        <p id="contactTitle">Contact Brickhouse</p>
+        <p id="contactDesc">Ask us anything! We are here for you</p>
+        <h2 id="contactPersonal">
+          Matt Hoffar | 604.616.1514 | MATT@BRICKHOUSE.VENTURES
+        </h2>
+        <h2 id="contactPersonal">
+          Spencer Smyl | 604.785.4229 | SPENCER@BRICKHOUSE.VENTURES
+        </h2>
+        <Myform />
+      </div>
+      <div className="containerMaps">
+        <div className="maps">
+          <div id="mapOne">
             <Flipping
-              id="mapOne"
               h="400px"
               w="400px"
               front={
@@ -44,9 +40,10 @@ function Contact() {
                 />
               }
             />
+          </div>
 
+          <div id="mapTwo">
             <Flipping
-              className="mapTwo"
               h="400px"
               w="400px"
               front={
@@ -64,7 +61,9 @@ function Contact() {
                 />
               }
             />
+          </div>
 
+          <div id="mapThree">
             <Flipping
               h="400px"
               w="400px"
@@ -85,8 +84,8 @@ function Contact() {
               }
             />
           </div>
-          <p id="copyright"> &copy; Copyright Brickhouse Ventures 2019</p>
         </div>
+        <p id="copyright"> &copy; Copyright Brickhouse Ventures 2019</p>
       </div>
     </>
   );

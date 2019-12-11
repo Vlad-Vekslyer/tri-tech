@@ -18,11 +18,15 @@ export default class MyForm extends React.Component {
         action="https://formspree.io/mrgbyelz"
         method="POST"
       >
-        <div className="formarea">
-          <p id="name">Name:</p>
-          <input type="text" name="name" id="info1" required />
-          <p id="email">Email:</p>
-          <input type="email" name="email" id="info2" required />
+        <div className="formArea">
+          <div className="nameemailArea">
+            <p id="name">Name:</p>
+            <input type="text" name="name" id="info1" required />
+
+            <p id="email">Email:</p>
+            <input type="email" name="email" id="info2" required />
+          </div>
+
           <div id="messageArea">
             <p id="messages">Message:</p>
             <textarea
@@ -34,10 +38,10 @@ export default class MyForm extends React.Component {
               required
             />
           </div>
-          <button id="submit">Submit Form</button>
-          {status === "SUCCESS" ? <p id="thanks">Thanks!</p> : <p />}
-          {status === "ERROR" && <p id="error">Ooops! There was an error.</p>}
         </div>
+        <button id="submit">Submit Form</button>
+        {status === "SUCCESS" ? <p id="thanks">Thanks!</p> : <p />}
+        {status === "ERROR" && <p id="error">Ooops! There was an error.</p>}
       </form>
     );
   }

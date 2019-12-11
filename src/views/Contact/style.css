@@ -23,7 +23,7 @@
     font-size: 24px;
     line-height: 28px;
   }
-  
+
   .formArea {
     display: flex;
     justify-content: space-evenly;
@@ -45,10 +45,10 @@
   #messages {
     margin-left: -560px;
   }
-  
+
   #info1,
   #info2 {
-    padding: 1px 67px 1px 20px;
+    padding: 1px 0 1px 0;
     height: 48px;
     width: 424px;
     font-family: Roboto;
@@ -57,7 +57,7 @@
     font-size: 18px;
     border-color: #068dc2;
   }
-  
+
   #message {
     font-family: Roboto;
     font-style: normal;
@@ -87,18 +87,18 @@
     border-radius: 5px;
     background-color: #068dc2;
   }
-  
+
   .containerMaps {
     background-color: #005484;
     padding-top: 50px;
     padding-bottom: 10px;
   }
-  
+
   .maps {
     display: flex;
     justify-content: space-evenly;
   }
-  
+
   .map1,
   .map2,
   .map3 {
@@ -106,7 +106,7 @@
     height: 400px;
     frameborder: 0 style= "border:0;" allowfullscreen= "";
   }
-  
+
   #copyright {
     font-family: Roboto;
     font-style: normal;
@@ -117,7 +117,7 @@
     color: #59caef;
     margin-top: 100px;
   }
-  
+
   @media screen and (max-width: 1024px) {
     .formArea {
       flex-direction: column;
