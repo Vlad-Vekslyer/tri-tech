@@ -14,6 +14,10 @@
     font-weight: normal;
   }
 
+  .mobile-hidden {
+    display: none;
+  }
+
   .ourTeam-content {
     width: 95%;
     display: flex;
@@ -71,12 +75,12 @@
     z-index: 1;
   }
 
-  .ourTeam-paragraph:nth-child(4) {
+  .ourTeam-paragraph:nth-of-type(3) {
     display: none;
   }
 
   @include break(xl) {
-    .ourTeam-paragraph:nth-child(4) {
+    .ourTeam-paragraph:nth-of-type(3) {
       display: block;
     }
 
@@ -97,6 +101,10 @@
   }
 
   @include break(md) {
+    .mobile-hidden {
+      display: inline;
+    }
+
     .ourTeam-content {
       display: block;
       height: 350px;
@@ -104,6 +112,7 @@
 
     .ourTeam-content-section {
       position: absolute;
+      margin: 10px 2% 0;
     }
 
     .ourTeam-img-section {
