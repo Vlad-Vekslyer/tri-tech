@@ -74,7 +74,10 @@ const AdvisoryPage = () => {
 
         return(
           <div id={`id-${captal}`} className="select-contents">
-            {sctCards}
+            <div className="wrap-select">
+              {sctCards}
+            </div>
+            
           </div>
         )
     });
@@ -83,7 +86,7 @@ const AdvisoryPage = () => {
       let e = document.getElementById('country')
       let selectValue = e.options[e.selectedIndex].value;
       
-      if(preValue){
+      if(preValue){ 
         document.getElementById(preValue).classList.toggle('selected')
       }
 
@@ -98,6 +101,7 @@ const AdvisoryPage = () => {
             <div id="card-component" className="card-component">
                 {cities}
             </div>
+            <h1>Advisory NetWork</h1>
               {/* mouseClickHandlar(props) <= should be properties*/}
               <WorldMap>
                 <svg onClick={() => mouseClickHandlar("van")} x="205" y="410" width="100" height="75" viewBox="0 0 77 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,8 +134,9 @@ const AdvisoryPage = () => {
           </div>    
 
           <div id="drop-down" className="drop-down">
+                <h1>Advisory NetWork</h1>
                 <form name="myForm" action="">
-                    <select name="country" id="country" onChange={() => selectChange()}>
+                    <select className="{prevalue and 'select'}" name="country" id="country" onChange={() => selectChange()}>
                         <option value="id-van" selected>Vancouver</option> 
                         <option value="id-chicago">Chicago</option>
                         <option value="id-la">LA</option>

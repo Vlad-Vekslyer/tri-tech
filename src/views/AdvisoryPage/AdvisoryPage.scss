@@ -116,13 +116,22 @@ section#advisory-network {
 /*--------------------------*/
 #drop-down {
   text-align: center;
+  background-color: #BFD9E3;
+  padding-bottom: 5%;
 
   @include break(md){
     display: none;
   }
 
+  h1 {
+    margin: 0;
+    padding: 30px;
+    font-family: "Abril Fatface";
+    font-size: 40px;
+  }
+
   #country{
-    width: 80%;
+    width: 26em;
     padding: 8px 16px;
   } 
   
@@ -135,9 +144,19 @@ section#advisory-network {
   .selected {
     display: block;
   }
-
   .dropCard {
+    margin: 15px auto;
+  }
+  .dropCard > #Card {
+    width: 20em;
+    height: 13em;
     border: 1px solid black;
+    box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.5);
+  }
+  .wrap-select {
+    
+    width: fit-content;
+    margin: auto;
   }
 
 }
