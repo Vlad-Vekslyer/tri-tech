@@ -7,28 +7,29 @@
   h2 {
     margin: 0;
     font-family: "Abril Fatface";
-    font-weight: normal; 
+    font-weight: normal;
   }
 }
 
 .ourTeam-content {
-  width: 1200px;
+  width: 90%;
   height: 357px;
   font-size: 14px;
   background: #fff;
-
-  display: flex;
-
+  position: relative;
+  z-index: 2;
   margin: 15px auto;
 }
 
 .ourTeam-img {
-  height: 357px;
-  width: 416px;
+  height: 100%;
+  width: 100%;
 }
 
 .outTeam-content-section {
   margin: 10px;
+  display: inline-block;
+  position: absolute;
 }
 
 .ourTeam-title {
@@ -37,9 +38,15 @@
   padding-top: 100px;
 }
 
+.ourTeam-img-section {
+  width: 35%;
+  display: inline-block;
+  height: 100%;
+}
+
 .ourTeam-name {
   font-size: 36px;
-  margin: 10px;
+  margin: 0;
 }
 .ourTeam-location {
   font-size: 24px;
@@ -48,10 +55,10 @@
 .ourTeam-paragraph {
 }
 
-.ourTeam-blue {
+.ourTeam-bluebg {
   position: absolute;
-  background: blue;
+  background: #068DC2;
   height: 100%;
-  width: calc(8% + 420px);
-  z-index: 10;
+  width: calc(5%;
+  z-index: 1;
 }
