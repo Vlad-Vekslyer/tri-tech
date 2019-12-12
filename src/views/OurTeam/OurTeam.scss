@@ -3,6 +3,7 @@
   background: #f1f1f1;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   h2 {
     margin: 0;
@@ -12,13 +13,17 @@
 }
 
 .ourTeam-content {
-  width: 90%;
+  width: 85%;
   height: 357px;
   font-size: 14px;
   background: #fff;
   position: relative;
   z-index: 2;
   margin: 15px auto;
+}
+
+.ourTeam-content:last-child {
+  margin-bottom: 80px;
 }
 
 .ourTeam-img {
@@ -52,13 +57,10 @@
   font-size: 24px;
 }
 
-.ourTeam-paragraph {
-}
-
 .ourTeam-bluebg {
   position: absolute;
   background: #068DC2;
   height: 100%;
-  width: calc(5%;
+  width: calc(7.5% + 29.75%);
   z-index: 1;
 }
