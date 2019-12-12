@@ -13,7 +13,7 @@ const OurTeam = () => {
           <img className="ourTeam-img" src={img} alt="" />
         </div>
 
-        <div className="outTeam-content-section">
+        <div className="ourTeam-content-section">
           <p className="ourTeam-name">
             Matt Hoffar, <span className="ourTeam-location">Vancouver</span>
           </p>
@@ -41,7 +41,7 @@ const OurTeam = () => {
           <img className="ourTeam-img" src={img} alt="" />
         </div>
 
-        <div className="outTeam-content-section">
+        <div className="ourTeam-content-section">
           <p className="ourTeam-name">
             Spencer Smyl, <span className="ourTeam-location">Vancouver</span>
           </p>
@@ -75,7 +75,7 @@ const OurTeam = () => {
           <img className="ourTeam-img" src={img} alt="" />
         </div>
 
-        <div className="outTeam-content-section">
+        <div className="ourTeam-content-section">
           <p className="ourTeam-name">
             Evan Kubes, <span className="ourTeam-location">Toronto</span>
           </p>

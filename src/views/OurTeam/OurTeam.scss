@@ -1,3 +1,6 @@
+// This styling is MOBILE-FIRST
+@import '../../styles/_breakpoints.scss';
+
 .ourTeam-container {
   min-height: 100vh;
   background: #f1f1f1;
@@ -10,57 +13,108 @@
     font-family: "Abril Fatface";
     font-weight: normal;
   }
-}
 
-.ourTeam-content {
-  width: 85%;
-  height: 357px;
-  font-size: 14px;
-  background: #fff;
-  position: relative;
-  z-index: 2;
-  margin: 15px auto;
-}
+  .ourTeam-content {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    margin: 15px auto;
+  }
 
-.ourTeam-content:last-child {
-  margin-bottom: 80px;
-}
+  .ourTeam-content:last-child {
+    margin-bottom: 80px;
+  }
 
-.ourTeam-img {
-  height: 100%;
-  width: 100%;
-}
+  .ourTeam-img {
+    height: 100%;
+    width: 100%;
+  }
 
-.outTeam-content-section {
-  margin: 10px;
-  display: inline-block;
-  position: absolute;
-}
+  .ourTeam-content-section {
+    margin: 0 10%;
+    display: inline-block;
+  }
 
-.ourTeam-title {
-  font-size: 48px;
-  text-align: center;
-  padding-top: 100px;
-}
+  .ourTeam-title {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 100px;
+  }
 
-.ourTeam-img-section {
-  width: 35%;
-  display: inline-block;
-  height: 100%;
-}
+  .ourTeam-img-section {
+    width: 80%;
+    margin: 40px 0 15px;
+    height: 300px;
+    display: inline-block;
+  }
 
-.ourTeam-name {
-  font-size: 36px;
-  margin: 0;
-}
-.ourTeam-location {
-  font-size: 24px;
-}
+  .ourTeam-name {
+    font-size: 36px;
+    margin: 0;
+  }
+  .ourTeam-location {
+    font-size: 24px;
+  }
 
-.ourTeam-bluebg {
-  position: absolute;
-  background: #068DC2;
-  height: 100%;
-  width: calc(7.5% + 29.75%);
-  z-index: 1;
+  .ourTeam-bluebg {
+    display: none;
+    position: absolute;
+    background: #068DC2;
+    height: 100%;
+    width: calc(2.5% + 33.25%);
+    z-index: 1;
+  }
+
+  .ourTeam-paragraph:nth-child(4) {
+    display: none;
+  }
+
+  @include break(xl) {
+    .ourTeam-paragraph:nth-child(4) {
+      display: block;
+    }
+
+    .ourTeam-content {
+      height: 357px;
+    }
+  }
+
+  @include break(mdlg) {
+    .ourTeam-content {
+      height: 300px;
+      width: 85%;
+    }
+
+    .ourTeam-bluebg {
+      width: calc(7.5% + 29.75%);
+    }
+  }
+
+  @include break(md) {
+    .ourTeam-content {
+      display: block;
+      height: 350px;
+    }
+
+    .ourTeam-content-section {
+      position: absolute;
+    }
+
+    .ourTeam-img-section {
+      width: 35%;
+      height: 100%;
+      margin: 0;
+    }
+
+    .ourTeam-bluebg {
+      display: block;
+    }
+  }
+
 }
