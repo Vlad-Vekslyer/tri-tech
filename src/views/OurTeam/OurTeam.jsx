@@ -4,6 +4,7 @@ import img from "../../assets/AboutUs-img.png";
 const OurTeam = () => {
   return (
     <section className="ourTeam-container">
+      <div className="ourTeam-bluebg"></div>
       {/* <div className="ourTeam-bluebg"></div> */}
       <h2 className="ourTeam-title">Our Team</h2>
 
@@ -109,7 +110,6 @@ const OurTeam = () => {
           </p>
         </div>
       </div>
-      <div className="ourTeam-bluebg"></div>
     </section>
   );
 };
