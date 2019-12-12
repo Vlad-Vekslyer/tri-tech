@@ -1,12 +1,18 @@
+@import '../../styles/breakpoints';
+    
 section#advisory-network {
   position: relative;
 
   #map {
-      display: block;
+      display: none;
       cursor: default;
       text-align: center;
       height: 90vh;
       width: 100%;
+
+      @include break(md) {
+        display: block;
+      }
 
       .point {
           position: relative;
@@ -48,10 +54,12 @@ section#advisory-network {
   /* |         card           | */
   /* -------------------------- */
   #card-component {
-    position: absolute;
-    left: 25%;
-    top: 25%;
-    width: 51.05em;
+    position: relative;
+    transform: translateY(15em);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
 
     .close {
         position: absolute;
@@ -65,11 +73,12 @@ section#advisory-network {
     }
 
     .card-contents {
-        min-width: 50%;
-        max-width: 100%;
-        display: none;
-        position: absolute;
-        border: 2px solid #dddddd;
+      min-width: calc(49em/2);
+      max-width: 49em;
+      min-height: 160px;
+      display: none;
+      position: absolute;
+      border: 2px solid #dddddd;
     }
     .card-open {
         display: block;
@@ -80,19 +89,76 @@ section#advisory-network {
         text-decoration: none;
         cursor: pointer;
     }
+}
+/*--------------------------*/
+/*|        slider          |*/
+/*--------------------------*/
+.slick-prev:before, .slick-next:before {
+    color: black;
+
+    @include break(md) {
+      display: none;
+    }
+
+    @include break(mdlg) {
+      display: block;
+    }
+}
+
+/*--------------------------*/
+/*|        vector          |*/
+/*--------------------------*/
+#map .vector {
+    user-select: none;
+}
+/*--------------------------*/
+/*|       drop-down         |*/
+/*--------------------------*/
+#drop-down {
+  text-align: center;
+  background-color: #BFD9E3;
+  padding-bottom: 5%;
+
+  @include break(md){
+    display: none;
   }
 
-  /*--------------------------*/
-  /*|        slider          |*/
-  /*--------------------------*/
-  .slick-prev:before, .slick-next:before {
-      color: black;
+  h1 {
+    margin: 0;
+    padding: 30px;
+    font-family: "Abril Fatface";
+    font-size: 40px;
   }
-  /*--------------------------*/
-  /*|        vector          |*/
-  /*--------------------------*/
-  #map .vector {
-      user-select: none;
+
+  #country{
+    width: 26em;
+    padding: 8px 16px;
+  } 
+  
+
+  .select-contents {
+    display: none;
+    text-align: center;
+  }
+
+  .selected {
+    display: block;
+  }
+  .dropCard {
+    margin: 15px auto;
+  }
+  .dropCard > #Card {
+    width: 20em;
+    height: 13em;
+    border: 1px solid black;
+    box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.5);
+  }
+  .wrap-select {
+    
+    width: fit-content;
+    margin: auto;
   }
 
 }
+}
+
