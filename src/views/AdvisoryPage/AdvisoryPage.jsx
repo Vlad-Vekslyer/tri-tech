@@ -2,8 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 // import MediaQuery from 'react-responsive';
 
-import "../../../node_modules/slick-carousel/slick/slick.css"; 
-import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import "./AdvisoryPage.scss";
 
 import Card from "../../components/Card/Card.jsx"
@@ -15,7 +13,7 @@ const AdvisoryPage = () => {
     let locate;             //to store previous id of Card
     let isClicked = false;  //to prevent breaking code when you open and close the Card
     let isClosed = false;
-    
+
     // for Slider --------
     const settings = {
         dots: false,
@@ -69,15 +67,22 @@ const AdvisoryPage = () => {
     }
 
     //code for drop down--------------
-    let selectCard = Object.keys(CardData).map(captal => {
-        let sctCards = CardData[captal].map((card, index) =><><div className="dropCard"><Card key={index*10} text={card.text} name={card.name} location={card.location}/></div></>)
-
+    let selectCard = Object.keys(CardData).map(city => {
+        let sctCards = CardData[city].map((card, index) => {
+          return(
+            <div className="dropCard">
+              <Card key={index*10} text={card.text} name={card.name} location={card.location}/>
+            </div>
+          )
+        });
+        let className = city === "van" ? "select-contents selected" : "select-contents";
+        preValue = "id-van";
         return(
-          <div id={`id-${captal}`} className="select-contents">
+          <div id={`id-${city}`} className={className}>
             <div className="wrap-select">
               {sctCards}
             </div>
-            
+
           </div>
         )
     });
@@ -85,14 +90,14 @@ const AdvisoryPage = () => {
     function selectChange() {
       let e = document.getElementById('country')
       let selectValue = e.options[e.selectedIndex].value;
-      
-      if(preValue){ 
+
+      if(preValue){
         document.getElementById(preValue).classList.toggle('selected')
       }
 
-      document.getElementById(selectValue).classList.toggle('selected') 
+      document.getElementById(selectValue).classList.toggle('selected')
       preValue = selectValue;    //to save previous value
-      console.log("check: ", e, selectValue)  
+      console.log("check: ", e, selectValue)
     }
 
     return (
@@ -101,7 +106,7 @@ const AdvisoryPage = () => {
             <div id="card-component" className="card-component">
                 {cities}
             </div>
-            <h1>Advisory NetWork</h1>
+            <h1>Advisory Network</h1>
               {/* mouseClickHandlar(props) <= should be properties*/}
               <WorldMap>
                 <svg onClick={() => mouseClickHandlar("van")} x="205" y="410" width="100" height="75" viewBox="0 0 77 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,13 +136,13 @@ const AdvisoryPage = () => {
                 </svg>
               </WorldMap>
 
-          </div>    
+          </div>
 
           <div id="drop-down" className="drop-down">
-                <h1>Advisory NetWork</h1>
+                <h1>Advisory Network</h1>
                 <form name="myForm" action="">
                     <select className="{prevalue and 'select'}" name="country" id="country" onChange={() => selectChange()}>
-                        <option value="id-van" selected>Vancouver</option> 
+                        <option value="id-van" selected>Vancouver</option>
                         <option value="id-chicago">Chicago</option>
                         <option value="id-la">LA</option>
                         <option value="id-nyc">NYC</option>
