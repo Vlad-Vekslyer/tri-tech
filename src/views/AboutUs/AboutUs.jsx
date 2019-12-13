@@ -13,7 +13,9 @@ const paragraphs = [
 const AboutUs = () => {
   return (
     <section id="aboutus" className="container">
-      <h2 className="aboutus-title">Our Mandate</h2>
+      <div className="aboutus-title-container">
+        <h2>Our Mandate</h2>
+      </div>
       <div className="aboutus-paragraph-container">
         {paragraphs.map((paragraph, index) => {
           return (
