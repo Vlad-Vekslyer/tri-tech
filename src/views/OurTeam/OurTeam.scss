@@ -101,8 +101,16 @@
   }
 
   @include break(md) {
+    button {
+      display: none;
+    }
+
     .mobile-hidden {
-      display: inline;
+      display: block;
+    }
+
+    .mobile-revealed {
+      display: none;
     }
 
     .ourTeam-content {
