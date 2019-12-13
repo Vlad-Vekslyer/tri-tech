@@ -8,6 +8,18 @@
   flex-direction: column;
   position: relative;
 
+  button {
+    border: none;
+    padding: 12px 50px;
+    font-size: 1.2em;
+    background-color: #068DC2;
+    color: white;
+    cursor: pointer;
+    font-family: Roboto;
+    display: block;
+    margin: 35px auto 30px;
+  }
+
   h2 {
     margin: 0;
     font-family: "Abril Fatface";
@@ -43,6 +55,16 @@
   .ourTeam-content-section {
     margin: 0 10%;
     display: inline-block;
+
+    div {
+      max-height: 62px;
+      transition: max-height 0.5s;
+      overflow: hidden;
+    }
+
+    div.drop {
+      max-height: 400px;
+    }
   }
 
   .ourTeam-title {
@@ -109,7 +131,7 @@
       display: block;
     }
 
-    .mobile-revealed {
+    .mobile-only {
       display: none;
     }
 
@@ -133,5 +155,4 @@
       display: block;
     }
   }
-
 }
