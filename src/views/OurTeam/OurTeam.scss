@@ -26,10 +26,6 @@
     font-weight: normal;
   }
 
-  .mobile-hidden {
-    display: none;
-  }
-
   .ourTeam-content {
     width: 95%;
     display: flex;
@@ -56,14 +52,14 @@
     margin: 0 10%;
     display: inline-block;
 
-    div {
-      max-height: 62px;
+    .mobile-only {
+      max-height: 65px;
       transition: max-height 0.5s;
       overflow: hidden;
     }
 
     div.drop {
-      max-height: 400px;
+      max-height: 300px;
     }
   }
 
@@ -124,14 +120,6 @@
 
   @include break(md) {
     button {
-      display: none;
-    }
-
-    .mobile-hidden {
-      display: block;
-    }
-
-    .mobile-only {
       display: none;
     }
 

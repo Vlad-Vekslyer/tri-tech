@@ -12,7 +12,7 @@ const OurTeam = () => {
       <div className="ourTeam-bluebg"></div>
       {/* <div className="ourTeam-bluebg"></div> */}
       <h2 className="ourTeam-title">Our Team</h2>
-      <Section name="Matt Hoffar" location="Vancouver" hidden={(
+      <Section name="Matt Hoffar" location="Vancouver">
         <>
           <p className="ourTeam-paragraph">
             Mr. Hoffar has over 20 years experience in sports and the capital
@@ -32,13 +32,8 @@ const OurTeam = () => {
             strategy, capital structure and regulatory compliance.
           </p>
         </>
-      )} revealed={(
-        <p className="ourTeam-paragraph">
-          Mr. Hoffar has over 20 years experience in sports and the capital
-          markets. He worked 6 years in NBA for the team Vancouver Grizzlies...
-        </p>
-      )} />
-      <Section name ="Spencer Smyl" location="Vancouver" hidden={(
+      </Section>
+      <Section name ="Spencer Smyl" location="Vancouver">
         <>
           <p className="ourTeam-paragraph">
             Mr. Smyl has over 8 years of capital markets and entrepreneur
@@ -64,13 +59,8 @@ const OurTeam = () => {
             vision and mandate of Brickhouse Ventures.
           </p>
         </>
-      )} revealed ={(
-        <p className="ourTeam-paragraph">
-          Mr. Smyl has over 8 years of capital markets and entrepreneur
-          experience with his focus on building and financing start-ups...
-        </p>
-      )}/>
-        <Section name="Evan Kubes" location="Toronto" hidden={(
+      </Section>
+        <Section name="Evan Kubes" location="Toronto">
           <>
             <p className="ourTeam-paragraph">
               Mr. Kubes is the President and Co-founder of MKM Group – Canada’s
@@ -101,14 +91,7 @@ const OurTeam = () => {
               of Detroit School of Law, respectively.
             </p>
           </>
-        )} revealed={(
-          <p className="ourTeam-paragraph">
-            Mr. Kubes is the President and Co-founder of MKM Group – Canada’s
-            first, and one of the world’s most influential, Law Firms and
-            Management Agencies dedicated exclusively to esports and content
-            creators...
-          </p>
-        )}/>
+        </Section>
     </section>
   );
 };
