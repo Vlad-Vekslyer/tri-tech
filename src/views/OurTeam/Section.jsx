@@ -13,7 +13,7 @@ const Section = (props) => {
       </div>
       <div className="ourTeam-content-section">
         <p className="ourTeam-name">
-          {props.name}, <span className="ourTeam-location">{props.location}</span>
+          {props.name} {"/"} <span className="ourTeam-location">{props.location}</span>
         </p>
         <div className={classNames("mobile-only" ,{"drop" : !isHidden})}>
           {props.children}

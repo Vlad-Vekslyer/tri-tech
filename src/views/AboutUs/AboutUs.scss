@@ -41,16 +41,16 @@
       font-size: 40px;
       line-height: 50px;
       font-family: "Abril Fatface";
-      text-align: left;
+      text-align: center;
       font-weight: normal;
       @include break(lg) {
         font-size: 48px;
         padding: 0;
-        margin: 50px auto 40px 25px;
+        margin: 50px auto 40px auto;
       }
     }
   }
-  
+
   .aboutus-paragraph-container {
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@
     @include break(lg) {
       padding: 0 20px;
     }
-  
+
     .aboutus-paragraph {
       position: relative;
       width: 300px;
@@ -103,5 +103,3 @@
     }
   }
 }
-
-
