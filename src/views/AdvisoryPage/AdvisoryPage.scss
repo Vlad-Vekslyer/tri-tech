@@ -1,5 +1,5 @@
 @import '../../styles/breakpoints';
-    
+
 section#advisory-network {
   position: relative;
 
@@ -133,8 +133,8 @@ section#advisory-network {
   #country{
     width: 26em;
     padding: 8px 16px;
-  } 
-  
+  }
+
 
   .select-contents {
     display: none;
@@ -154,11 +154,10 @@ section#advisory-network {
     box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.5);
   }
   .wrap-select {
-    
+
     width: fit-content;
     margin: auto;
   }
 
 }
 }
-
