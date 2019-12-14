@@ -1,5 +1,5 @@
 @import '../../styles/breakpoints';
-    
+
 section#advisory-network {
   position: relative;
 
@@ -24,6 +24,7 @@ section#advisory-network {
         font-family: "Abril Fatface";
         font-weight: normal;
         font-size: 3em;
+        color: white;
         position: absolute;
         left: 50%;
         margin-top: 70px;
@@ -35,7 +36,7 @@ section#advisory-network {
       }
 
       polygon, path {
-        fill: #ECECEC;
+        fill: rgba(176, 205, 235, 0.2);
       }
 
       path.city:hover, path.pointer:hover {
@@ -43,7 +44,7 @@ section#advisory-network {
       }
 
       path.city {
-        fill: black;
+        fill: white;
       }
 
       path.pointer {
@@ -133,8 +134,8 @@ section#advisory-network {
   #country{
     width: 26em;
     padding: 8px 16px;
-  } 
-  
+  }
+
 
   .select-contents {
     display: none;
@@ -154,11 +155,10 @@ section#advisory-network {
     box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.5);
   }
   .wrap-select {
-    
+
     width: fit-content;
     margin: auto;
   }
 
 }
 }
-
