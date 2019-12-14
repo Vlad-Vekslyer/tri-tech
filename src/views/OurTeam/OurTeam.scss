@@ -85,15 +85,6 @@
     font-size: 24px;
   }
 
-  .ourTeam-bluebg {
-    display: none;
-    position: absolute;
-    background: #3898EC;
-    height: 100%;
-    width: calc(2.5% + 33.25%);
-    z-index: 1;
-  }
-
   .ourTeam-paragraph:nth-of-type(3) {
     display: none;
   }
@@ -113,13 +104,11 @@
       height: 300px;
       width: 85%;
     }
-
-    .ourTeam-bluebg {
-      width: calc(7.5% + 29.75%);
-    }
   }
 
   @include break(md) {
+    background: url("../../assets/OurTeam-bg.svg");
+
     button {
       display: none;
     }
@@ -142,10 +131,6 @@
       width: 35%;
       height: 100%;
       margin: 0;
-    }
-
-    .ourTeam-bluebg {
-      display: block;
     }
   }
 }
