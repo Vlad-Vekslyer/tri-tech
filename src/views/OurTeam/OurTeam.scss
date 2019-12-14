@@ -131,6 +131,10 @@
     .ourTeam-content-section {
       position: absolute;
       margin: 10px 2% 0;
+
+      .mobile-only {
+        max-height: 300px;
+      }
     }
 
     .ourTeam-img-section {
