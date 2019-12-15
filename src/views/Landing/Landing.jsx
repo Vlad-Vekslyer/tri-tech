@@ -4,7 +4,7 @@ import './Landing.scss';
 
 function Landing(){
   return(
-    <div style={{height:"100vh", paddingTop: "124px"}}>
+    <div style={{height:"100vh", paddingTop: "124px", paddingBottom: "20px"}}>
       <section id="text">
         <h1>Enabling Growth.</h1>
         <h1>Creating Value.</h1>

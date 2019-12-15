@@ -1,10 +1,9 @@
 .flip-card {
     background-color: transparent;
-  
     perspective: 1000px;
     float: left;
   }
-  
+
   .flip-card-inner {
     position: relative;
     width: 100%;
@@ -14,11 +13,11 @@
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
-  
+
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
-  
+
   .flip-card-front,
   .flip-card-back {
     position: absolute;
@@ -26,12 +25,16 @@
     height: 100%;
     backface-visibility: hidden;
   }
-  
+
+  .flip-card-back > * {
+    width: 100%;
+    height: 100%;
+  }
+
   .flip-card-front {
     background-color: white;
   }
-  
+
   .flip-card-back {
     transform: rotateY(180deg);
   }
-  

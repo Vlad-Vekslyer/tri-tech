@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./Contact.scss";
 
 export default class MyForm extends React.Component {
   constructor(props) {
@@ -32,7 +32,6 @@ export default class MyForm extends React.Component {
             <textarea
               type="text"
               name="message"
-              cols="60"
               rows="7"
               id="messagetext"
               required
