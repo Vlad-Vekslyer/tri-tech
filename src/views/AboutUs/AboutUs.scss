@@ -64,41 +64,42 @@
       padding: 0 20px;
     }
 
+    img {
+      width: 45px;
+      height: 35px;
+    }
+
+    .aboutus-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .aboutus-paragraph {
       position: relative;
       width: 300px;
-      height: 130px;
-      margin: 20px;
-      text-align: left;
+      margin: 10px 20px 25px;
+      text-align: center;
       color: #e5e5e5;
       font-size: 20px;
       line-height: 28px;
-      &::after {
-        position: absolute;
-        content: "";
-        display: block;
-        bottom: 0;
-        left: 44%;
-        width: 12%;
-        height: 6px;
-        background-color: #e5e5e5;
-      }
+
       @include break(md) {
         width: 400px;
-        margin: 20px 25px;
+        margin: 10px 25px 20px;
       }
       @include break(mdlg) {
-        font-size: 30px;
+        font-size: 27px;
         width: 300px;
         height: 180px;
-        margin: 40px 25px;
+        margin: 10px 25px 40px;
       }
       @include break(xl) {
-        font-size: 30px;
+        font-size: 27px;
         line-height: 35px;
         width: 350px;
         height: 190px;
-        margin: 30px 25px;
+        margin: 10px 25px 30px;
       }
     }
   }
