@@ -11,10 +11,11 @@ function Contact() {
       <div className="containerContact">
         <p id="contactTitle">Contact Brickhouse</p>
         <p id="contactDesc">Ask us anything! We are here for you</p>
-        <h2 id="contactPersonal">
+        <h2 className="contactPersonal">
           Matt Hoffar | 604.616.1514 | MATT@BRICKHOUSE.VENTURES
         </h2>
-        <h2 id="contactPersonal">
+        <hr/>
+        <h2 className="contactPersonal">
           Spencer Smyl | 604.785.4229 | SPENCER@BRICKHOUSE.VENTURES
         </h2>
         <Myform />
@@ -24,12 +25,10 @@ function Contact() {
           <>
             <Flipping
               front={
-                <div>
-                  <h2>
-                    <h2>Vancouver Office:</h2>
-                    303 - 570 Granville Street Vancouver B.C., V6C 3P1
-                  </h2>
-                </div>
+                <>
+                  <h2>Vancouver</h2>
+                  <p>303 - 570 Granville Street Vancouver B.C., V6C 3P1</p>
+                </>
               }
               back={
                 <iframe
@@ -43,10 +42,8 @@ function Contact() {
             <Flipping
               front={
                 <>
-                  <h2>
-                    <h2>Toronto Office:</h2>
-                    393 University Avenue, Suite 2000 Toronto ON, M5G 1E
-                  </h2>
+                    <h2>Toronto</h2>
+                    <p>393 University Avenue, Suite 2000 Toronto ON, M5G 1E</p>
                 </>
               }
               back={
@@ -61,11 +58,8 @@ function Contact() {
             <Flipping
               front={
                 <>
-                  <h2>
-                    <h2>Mexico Office:</h2>
-                    Sierra Santa Rosa 47, Colonia Reforma Social, CDMX 11650
-                    Mexico City
-                  </h2>
+                    <h2>Mexico</h2>
+                    <p>Sierra Santa Rosa 47, Colonia Reforma Social, CDMX 11650 Mexico City</p>
                 </>
               }
               back={

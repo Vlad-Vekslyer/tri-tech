@@ -3,33 +3,41 @@ body {
   padding: 0;
 }
 
+
 .containerContact {
   width: 90%;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
+
+  hr {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50%;
+  }
 }
 
 #contactTitle {
   width: 100%;
   text-align: center;
-  color: #068dc2;
+  color: #068DC2;
   font: 48px Abril Fatface;
   font-weight: normal;
   line-height: 56px;
   margin-block-end: auto;
 }
 #contactDesc {
-  color: #59caef;
+  color: #068DC2;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 28px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
-#contactPersonal {
+.contactPersonal {
+  margin: 0;
+  padding: 10px 0;
   font-family: Roboto;
   font-style: normal;
   font-weight: 1000;
@@ -97,7 +105,6 @@ body {
   line-height: 23px;
   text-align: center;
   border: none;
-  border-radius: 5px;
   background-color: #068dc2;
 }
 
@@ -173,6 +180,10 @@ body {
     align-items: center;
   }
 
+  #submit {
+    width: 80%;
+  }
+
   #info1, #info2 {
     padding: 0;
   }
@@ -227,10 +238,6 @@ body {
   }
   #contactPersonal {
     font-size: 20px;
-  }
-
-  #submit {
-    width: 80%;
   }
   .flip-card,
   .flip-card-back,
