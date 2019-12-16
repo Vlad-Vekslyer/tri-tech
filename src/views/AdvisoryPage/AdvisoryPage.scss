@@ -76,7 +76,8 @@ section#advisory-network {
     }
 
     .card-contents {
-      width: 50%;
+      min-width: 25%;
+      max-width: 50%;
       min-height: 160px;
       display: none;
       position: absolute;
