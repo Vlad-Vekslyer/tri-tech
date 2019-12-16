@@ -1,29 +1,51 @@
 import React from "react";
+import "../../styles/container.scss"
 import "./AboutUs.scss";
-import img from "../../assets/AboutUs-img.png";
+
+import teacherIcon from "../../assets/Icons/chalkboard-teacher-solid.svg";
+import chartIcon from "../../assets/Icons/chart-line-solid.svg";
+import employeeIcon from "../../assets/Icons/address-card-regular.svg";
+import adviceIcon from "../../assets/Icons/comments-dollar-solid.svg";
+import laptopIcon from "../../assets/Icons/laptop-solid.svg";
 
 const paragraphs = [
-  "We take an active role as advisors and/or board members in companies we invest in",
-  "- We help these companies with business development, partnerships and strategy",
-  " - We help with the buildout and the hiring of the management staff",
-  "  - We advise companies on the structure of future financing rounds and the path to public markets if appropriate",
-  "  - Work with companies to find tech that improves their experience and/or workflow."
+  {
+    body: "Take an active role as advisors and/or board members in companies we invest in",
+    icon: teacherIcon
+  },
+  {
+    body: "Help these companies with business development, partnerships and strategy",
+    icon: chartIcon
+  },
+  {
+    body: "Help with the buildout and the hiring of the management staff",
+    icon: employeeIcon
+  },
+  {
+    body: "Advise companies on the structure of future financing rounds and the path to public markets",
+    icon: adviceIcon
+  },
+  {
+    body: "Work with companies to find tech that improves their experience and/or workflow.",
+    icon: laptopIcon
+  }
 ];
 
 const AboutUs = () => {
   return (
-    <section className="aboutus-container">
-      <div>
-        <img className="aboutus-img" src={img} alt="" />
+    <section id="aboutus" className="container">
+      <div className="aboutus-title-container">
+        <h2>Our Mandate</h2>
       </div>
-      <div>
-        <h2 className="aboutus-title">About Us</h2>
-
+      <div className="aboutus-paragraph-container">
         {paragraphs.map((paragraph, index) => {
           return (
-            <p key={index} className="aboutus-paragraph">
-              {paragraph}
-            </p>
+            <div className="aboutus-item">
+              <img key={index} src={paragraph.icon}/>
+              <p key={index} className="aboutus-paragraph">
+                {paragraph.body}
+              </p>
+            </div>
           );
         })}
       </div>
