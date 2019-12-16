@@ -76,8 +76,7 @@ section#advisory-network {
     }
 
     .card-contents {
-      min-width: 25%;
-      max-width: 50%;
+      width: 50%;
       min-height: 160px;
       display: none;
       position: absolute;
@@ -97,7 +96,7 @@ section#advisory-network {
 /*|        slider          |*/
 /*--------------------------*/
 .slick-prev:before, .slick-next:before {
-    color: black;
+    color: white;
 
     @include break(md) {
       display: none;
