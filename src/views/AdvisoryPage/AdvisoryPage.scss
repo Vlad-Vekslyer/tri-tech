@@ -9,6 +9,7 @@ section#advisory-network {
       text-align: center;
       height: 90vh;
       width: 100%;
+      z-index: 1;
 
       @include break(md) {
         display: block;
@@ -55,12 +56,13 @@ section#advisory-network {
   /* |         card           | */
   /* -------------------------- */
   #card-component {
-    position: relative;
-    transform: translateY(15em);
+    position: absolute;
+    top: 30%;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: flex-start;
+    z-index: 0;
 
     .close {
         position: absolute;
@@ -74,8 +76,8 @@ section#advisory-network {
     }
 
     .card-contents {
-      min-width: calc(49em/2);
-      max-width: 49em;
+      min-width: 25%;
+      max-width: 50%;
       min-height: 160px;
       display: none;
       position: absolute;
@@ -95,7 +97,7 @@ section#advisory-network {
 /*|        slider          |*/
 /*--------------------------*/
 .slick-prev:before, .slick-next:before {
-    color: black;
+    color: white;
 
     @include break(md) {
       display: none;
@@ -109,56 +111,89 @@ section#advisory-network {
 /*--------------------------*/
 /*|        vector          |*/
 /*--------------------------*/
-#map .vector {
-    user-select: none;
-}
+  #map .vector {
+      user-select: none;
+  }
 /*--------------------------*/
 /*|       drop-down         |*/
 /*--------------------------*/
-#drop-down {
-  text-align: center;
-  background-color: #BFD9E3;
-  padding-bottom: 5%;
-
-  @include break(md){
-    display: none;
-  }
-
-  h1 {
-    margin: 0;
-    padding: 30px;
-    font-family: "Abril Fatface";
-    font-size: 40px;
-  }
-
-  #country{
-    width: 26em;
-    padding: 8px 16px;
-  }
-
-
-  .select-contents {
-    display: none;
+  #drop-down {
     text-align: center;
+    background-color: #BFD9E3;
+    padding-bottom: 5%;
+
+    .select-selected {
+      background-color: dodgerblue;
+    }
+
+    @include break(md){
+      display: none;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 30px;
+      font: 400 3em "Abril Fatface";
+    }
+
+    #country{
+      width: 90%;
+      padding: 8px 16px;
+    }
+
+  .select-box {
+    position: relative;
+
+    .selected {
+      display: block;
+    }
+    .dropCard {
+      margin: 15px auto;
+    }
+    .dropCard > #Card {
+      width: 20em;
+      height: 13em;
+      border: 1px solid black;
+      box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.5);
+    }
+    .wrap-select {
+      width: fit-content;
+      margin: auto;
+    }
+
+    select {
+      padding: 14px 12px;
+      text-align-last: start;
+      background-color: white;
+      cursor: pointer;
+      margin: 0em;
+      font: 500 14px Arial;
+      border-width: 0px;
+      border-style: none;
+      box-shadow: 2px 4px 4px 0px rgb(169, 169, 169);
+    }
   }
 
-  .selected {
-    display: block;
-  }
-  .dropCard {
-    margin: 15px auto;
-  }
-  .dropCard > #Card {
-    width: 20em;
-    height: 13em;
-    border: 1px solid black;
-    box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.5);
-  }
-  .wrap-select {
+    .select-contents {
+      display: none;
+      text-align: center;
+    }
 
-    width: fit-content;
-    margin: auto;
-  }
+    .selected {
+      display: block;
+    }
+    .dropCard {
+      margin: 30px auto;
+    }
+    .dropCard > #Card {
+      width: 20em;
+      height: 13em;
+      box-shadow: 2px 4px 4px 0px rgb(169, 169, 169);
+    }
+    .wrap-select {
+      width: fit-content;
+      margin: auto;
+    }
 
-}
+  }
 }
