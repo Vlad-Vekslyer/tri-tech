@@ -1,9 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-// import MediaQuery from 'react-responsive';
-
-import "../../../node_modules/slick-carousel/slick/slick.css"; 
-import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import "./AdvisoryPage.scss";
 
 import Card from "../../components/Card/Card.jsx"
@@ -15,7 +11,7 @@ const AdvisoryPage = () => {
     let locate;             //to store previous id of Card
     let isClicked = false;  //to prevent breaking code when you open and close the Card
     let isClosed = false;
-    
+
     // for Slider --------
     const settings = {
         dots: false,
@@ -77,7 +73,7 @@ const AdvisoryPage = () => {
             <div className="wrap-select">
               {sctCards}
             </div>
-            
+
           </div>
         )
     });
@@ -85,14 +81,14 @@ const AdvisoryPage = () => {
     function selectChange() {
       let e = document.getElementById('country')
       let selectValue = e.options[e.selectedIndex].value;
-      
-      if(preValue){ 
+
+      if(preValue){
         document.getElementById(preValue).classList.toggle('selected')
       }
 
-      document.getElementById(selectValue).classList.toggle('selected') 
+      document.getElementById(selectValue).classList.toggle('selected')
       preValue = selectValue;    //to save previous value
-      console.log("check: ", e, selectValue)  
+      console.log("check: ", e, selectValue)
     }
 
 
@@ -143,13 +139,13 @@ const AdvisoryPage = () => {
 
               </WorldMap>
 
-          </div>    
+          </div>
           {/* try to make new div to make own select and option design */}
           <div id="drop-down" className="drop-down">
                 <h1>Advisory NetWork</h1>
                 <div className="select-box">
                   <select name="country" id="country" onChange={() => selectChange()}>
-                      <option value="id-van" selected>Vancouver</option> 
+                      <option value="id-van" selected>Vancouver</option>
                       <option value="id-chicago">Chicago</option>
                       <option value="id-la">LA</option>
                       <option value="id-nyc">NYC</option>
@@ -158,7 +154,7 @@ const AdvisoryPage = () => {
                       <option value="id-berlin">Berlin</option>
                   </select>
                 </div>
-              
+
                 {selectCard}
           </div>
         </section>
