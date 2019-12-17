@@ -15,16 +15,17 @@
       url(../../assets/bottomleft.png) no-repeat bottom left,
       url(../../assets/bottomright.png) no-repeat bottom right;
 
-      background-size: 18%;
-      @include break(sm) {
-        background-size: 12%;
-      }
-      @include break(mdlg) {
-        background-size: 10%;
-      }
-      @include break(lg) {
-        background-size: 7%;
-      }
+    background-size: 18%;
+    @include break(sm) {
+      background-size: 12%;
+    }
+    @include break(mdlg) {
+      background-size: 10%;
+    }
+    @include break(lg) {
+      background-size: 7%;
+    }
+
     display: block;
     top: 0;
     left: 0;
