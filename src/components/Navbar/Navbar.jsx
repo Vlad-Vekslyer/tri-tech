@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import './Navbar.scss';
-import Icon from './Icon.jsx';
 import classnames from "classnames";
 
 function Navbar(){
@@ -10,7 +9,7 @@ function Navbar(){
       <div className="nav-container">
         <ul className="top">
           <li className="start">
-            <Icon/>
+            <div/>Triangle Inc.
           </li>
           <li onClick={() => setDrop(true)} className="hamburger">
             <span></span>

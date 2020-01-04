@@ -43,6 +43,11 @@ nav {
       cursor: pointer;
       color: #068DC2;
     }
+
+    li.start:hover {
+      cursor: pointer;
+      color: initial;
+    }
   }
 
   ul.top {
@@ -71,6 +76,17 @@ nav {
 
   li.start {
     display: inline-block;
+    font-size: 1.5em;
+    color: black;
+
+    div {
+      background-image: url('./Triangle.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      width: 79px;
+      height: 62px;
+    }
   }
 
   @include break(md, true){
