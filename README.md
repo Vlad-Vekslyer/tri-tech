@@ -1,10 +1,16 @@
 # Credits: 
 Isao Kozakai - Development
+
 Gustavo Rocha Stamm - Development
+
 Nobuyuki Tono - Development
+
 Tatsuya - Development
+
 Vladyslav Vekslyer - Development & Design
+
 Yesl Park - Design
+
 Ayako Sayama - Design
 
 # Guidelines:
