@@ -10,23 +10,23 @@ import laptopIcon from "../../assets/Icons/laptop-solid.svg";
 
 const paragraphs = [
   {
-    body: "Take an active role as advisors and/or board members in companies we invest in",
+    body: "Educate staff on the latest technologies with online and in-person courses",
     icon: teacherIcon
   },
   {
-    body: "Help these companies with business development, partnerships and strategy",
+    body: "Provide data analysis tools to help with strategy development",
     icon: chartIcon
   },
   {
-    body: "Help with the buildout and the hiring of the management staff",
+    body: "Produce reliable staff performance reviews and assessments",
     icon: employeeIcon
   },
   {
-    body: "Advise companies on the structure of future financing rounds and the path to public markets",
+    body: "Advise on cost-effective solutions to technical requirements",
     icon: adviceIcon
   },
   {
-    body: "Work with companies to find tech that improves their experience and/or workflow.",
+    body: "Help companies address any hardware needs they might have",
     icon: laptopIcon
   }
 ];
@@ -35,7 +35,7 @@ const AboutUs = () => {
   return (
     <section id="aboutus" className="container">
       <div className="aboutus-title-container">
-        <h2>Our Mandate</h2>
+        <h2>Our Mission</h2>
       </div>
       <div className="aboutus-paragraph-container">
         {paragraphs.map((paragraph, index) => {

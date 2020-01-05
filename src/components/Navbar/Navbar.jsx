@@ -9,7 +9,7 @@ function Navbar(){
       <div className="nav-container">
         <ul className="top">
           <li className="start">
-            <div/>Triangle Inc.
+            <div/>Tri-Tech
           </li>
           <li onClick={() => setDrop(true)} className="hamburger">
             <span></span>

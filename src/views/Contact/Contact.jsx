@@ -9,14 +9,14 @@ function Contact() {
   return (
     <>
       <div className="containerContact">
-        <p id="contactTitle">Contact Brickhouse</p>
+        <p id="contactTitle">Contact Tri-Tech</p>
         <p id="contactDesc">Ask us anything! We are here for you</p>
         <h2 className="contactPersonal">
-          Matt Hoffar | 604.616.1514 | MATT@BRICKHOUSE.VENTURES
+          Thomas Diaz | 514.716.3897 | ThomasDiaz@tritech.ca
         </h2>
         <hr/>
         <h2 className="contactPersonal">
-          Spencer Smyl | 604.785.4229 | SPENCER@BRICKHOUSE.VENTURES
+          Richard Hopkins | 819.947.0220 | RichardHopkins@tritech.ca
         </h2>
         <Myform />
       </div>
@@ -27,12 +27,12 @@ function Contact() {
               front={
                 <>
                   <h2>Vancouver</h2>
-                  <p>303 - 570 Granville Street Vancouver B.C., V6C 3P1</p>
+                  <p>555 W Hastings St, Suite 2020 Vancouver, BC V6B 4N6</p>
                 </>
               }
               back={
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.5803841779402!2d-123.1181094843105!3d49.28434787933156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178a44b0e6d%3A0xd1b181b45c34984c!2s303-543%20Granville%20St%2C%20Vancouver%2C%20BC%20V6C%201X8!5e0!3m2!1sen!2sca!4v1574718654526!5m2!1sen!2sca"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9827.338881155312!2d-123.11513785793548!3d49.27780344110362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717860aced7d%3A0x50dd6fe331e37ba1!2sVancouver%20Lookout!5e0!3m2!1sen!2sca!4v1578219234558!5m2!1sen!2sca"
                 />
               }
             />
@@ -43,12 +43,12 @@ function Contact() {
               front={
                 <>
                     <h2>Toronto</h2>
-                    <p>393 University Avenue, Suite 2000 Toronto ON, M5G 1E</p>
+                    <p>1 Dundas St E, Unit 5000 Toronto, ON M5B 2R8</p>
                 </>
               }
               back={
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4141.830299008049!2d-79.3884735726749!3d43.65382906270421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34ceb74396a7%3A0x64ab421386854d88!2s393%20University%20Ave%20%232000%2C%20Toronto%2C%20ON%20M5G%201E6!5e0!3m2!1sen!2sca!4v1574722698637!5m2!1sen!2sca"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10287.49617545933!2d-79.39348389210728!3d43.651680888167235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34cad13905ff%3A0xfba1e6ac7018788a!2sYonge-Dundas%20Square!5e0!3m2!1sen!2sca!4v1578219370922!5m2!1sen!2sca"
                 />
               }
             />
@@ -58,19 +58,19 @@ function Contact() {
             <Flipping
               front={
                 <>
-                    <h2>Mexico</h2>
-                    <p>Sierra Santa Rosa 47, Colonia Reforma Social, CDMX 11650 Mexico City</p>
+                    <h2>Brazil</h2>
+                    <p>Sbs Lotes 3/4, SBS Q. 4 - Asa Sul, Brasília - DF, 70092-900, Brazil</p>
                 </>
               }
               back={
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.516841973273!2d-99.21695278509327!3d19.43327098688387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d20221a76aa3dd%3A0x6a018dc82a69983b!2sSierra%20Santa%20Rosa%2047%2C%20Reforma%20Soc%2C%20Miguel%20Hidalgo%2C%2011650%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX%2C%20M%C3%A9xico!5e0!3m2!1sen!2sca!4v1574722869700!5m2!1sen!2sca"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10858.443141913696!2d-47.881852077094905!3d-15.801843474062789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3adf2b5b983f%3A0xc4c1f28c429a59a5!2sCaixa%20Cultural!5e0!3m2!1sen!2sca!4v1578219583856!5m2!1sen!2sca"
                 />
               }
             />
           </>
         </div>
-        <p id="copyright"> &copy; Copyright Brickhouse Ventures 2019</p>
+        <p id="copyright"> &copy; Copyright Tri-Tech Co. 2020</p>
       </div>
     </>
   );

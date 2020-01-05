@@ -28,7 +28,8 @@ const AdvisoryPage = () => {
     // Object.map then Array.map
     //city is key for object, cards is an object
     let cities = Object.keys(CardData).map(city => {
-        let cards = CardData[city].map((card, index) => <Card key={index} text={card.text} name={card.name} location={card.location}/>);
+        let text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum tortor id massa efficitur, ac eleifend enim aliquet. Nam sodales.';
+        let cards = CardData[city].map((card, index) => <Card key={index} text={text} name={card.name} location={card.location}/>);
         // to separate if cards has more than two contents-----------
         let regCards=[], slideCards=[];
         cards.forEach(content => {
@@ -67,10 +68,11 @@ const AdvisoryPage = () => {
 
     //code for drop down--------------
     let selectCard = Object.keys(CardData).map(city => {
+        let text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum tortor id massa efficitur, ac eleifend enim aliquet. Nam sodales.';
         let sctCards = CardData[city].map((card, index) => {
           return(
             <div className="dropCard">
-              <Card key={index*10} text={card.text} name={card.name} location={card.location}/>
+              <Card key={index*10} text={text} name={card.name} location={card.location}/>
             </div>
           )
         });
@@ -168,12 +170,4 @@ const AdvisoryPage = () => {
     )
 }
 
-
-// <div className="vector vector1"><img className="point" onClick={() => mouseClickHandlar("chicago")} src={vector} ></img><p>Chicago</p></div>
-// <div className="vector vector2"><img className="point" onClick={() => mouseClickHandlar("van")} src={vector} ></img><p>Vancouver</p></div>
-// <div className="vector vector3"><img className="point" onClick={() => mouseClickHandlar("la")} src={vector} ></img><p>Los Angels</p></div>
-// <div className="vector vector4"><img className="point" onClick={() => mouseClickHandlar("nyc")} src={vector} ></img><p>New york City</p></div>
-// <div className="vector vector5"><img className="point" onClick={() => mouseClickHandlar("dallas")} src={vector} ></img><p>Dallas</p></div>
-// <div className="vector vector6"><img className="point" onClick={() => mouseClickHandlar("mexico")} src={vector} ></img><p>Mexico City</p></div>
-// <div className="vector vector7"><img className="point" onClick={() => mouseClickHandlar("berlin")} src={vector} ></img><p>Berlin</p></div>
 export default AdvisoryPage;
