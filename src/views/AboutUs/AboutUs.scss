@@ -18,15 +18,15 @@
     bottom: 0;
   }
 
-  &::after {
-    position: absolute;
-    content: url(../../assets/logo.png);
-    display: block;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20%;
-    margin: auto 0;
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: url(../../assets/logo.png);
+  //   display: block;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   right: 20%;
+  //   margin: auto 0;
+  // }
 
   .aboutus-title-container {
     display: flex;
