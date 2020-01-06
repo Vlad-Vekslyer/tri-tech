@@ -5,7 +5,7 @@ Gustavo Rocha Stamm - Development
 
 Nobuyuki Tono - Development
 
-Tatsuya - Development
+Tatsuya Takarabe - Development
 
 Vladyslav Vekslyer - Development & Design
 
