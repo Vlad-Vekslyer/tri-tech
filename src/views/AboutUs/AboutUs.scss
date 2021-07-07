@@ -9,14 +9,30 @@
   &::before {
     position: absolute;
     content: "";
-    background: url(../../assets/corner.png) no-repeat;
-    background-size: 100% 100%;
+    background:
+      url(../../assets/topleft.png) no-repeat top left,
+      url(../../assets/topright.png) no-repeat top right,
+      url(../../assets/bottomleft.png) no-repeat bottom left,
+      url(../../assets/bottomright.png) no-repeat bottom right;
+
+    background-size: 18%;
+    @include break(sm) {
+      background-size: 12%;
+    }
+    @include break(mdlg) {
+      background-size: 10%;
+    }
+    @include break(lg) {
+      background-size: 7%;
+    }
+
     display: block;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
   }
+
 
   &::after {
     position: absolute;
